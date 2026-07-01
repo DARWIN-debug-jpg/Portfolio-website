@@ -3,11 +3,27 @@
 // ============================================
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.querySelector('.nav-menu');
+const themeToggle = document.getElementById('themeToggle');
 
 if (hamburger) {
     hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
         navMenu.classList.toggle('active');
+    });
+}
+
+if (themeToggle) {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'light') {
+        document.body.classList.add('light-mode');
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    }
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('light-mode');
+        const isLight = document.body.classList.contains('light-mode');
+        localStorage.setItem('theme', isLight ? 'light' : 'dark');
+        themeToggle.innerHTML = isLight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
     });
 }
 
@@ -68,24 +84,20 @@ if (contactForm) {
 // ============================================
 // SCROLL REVEAL ANIMATION
 // ============================================
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
-
-const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-            observer.unobserve(entry.target);
+            entry.target.classList.add('visible');
+            revealObserver.unobserve(entry.target);
         }
     });
-}, observerOptions);
+}, {
+    threshold: 0.15,
+    rootMargin: '0px 0px -40px 0px'
+});
 
-// Observe all project cards and stat boxes
-document.querySelectorAll('.project-card, .stat, .info-item').forEach(el => {
-    el.style.opacity = '0';
-    observer.observe(el);
+document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .project-card, .stat, .info-item, .service-card').forEach((element) => {
+    revealObserver.observe(element);
 });
 
 // ============================================

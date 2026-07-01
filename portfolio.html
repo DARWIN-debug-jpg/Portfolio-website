@@ -4,46 +4,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build Ready Digital creates modern websites, TypeScript applications, and SEO-focused digital experiences.">
+    <meta name="keywords" content="web design, TypeScript, SEO, frontend development, portfolio">
     <title>BUILD READY DIGITAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="images/Build Ready logo.png">
+    <link rel="icon" type="image/x-icon" href="images/Build Ready logo 2.png">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="images/Favicon.png" alt="BuildReadyDigital Logo" style="height: 120px; margin-right: 1rem;">
-                <span style="font-size: 2rem; font-weight: bold; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: flex; align-items: center;">BUILD READY DIGITAL</span>
+                <div class="brand-mark">
+                    <img src="images/Build Ready logo 2.png" alt="BuildReadyDigital Logo">
+                </div>
+                <span class="brand-name">BUILD READY DIGITAL</span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/portfolio.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="/portfolio.html" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="/app.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link" target="_blank" rel="noopener noreferrer">Home</a></li>
+                <li class="nav-item"><a href="portfolio.html#about" class="nav-link" target="_blank" rel="noopener noreferrer">About</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link" target="_blank" rel="noopener noreferrer">Services</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
+                <li class="nav-item"><a href="app.html" class="nav-link" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger">
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+                </button>
+            </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
+        <div class="hero-content reveal-left">
             <h1 class="hero-title">Hi, I'm <span class="highlight">DARWIN Developer</span></h1>
             <p class="hero-subtitle">Full Stack Developer | Creative Problem Solver</p>
-            <p class="hero-description">I build beautiful, responsive websites and applications</p>
+            <p class="hero-description">I build beautiful, responsive websites and applications that feel premium and perform flawlessly.</p>
             <a href="#projects" class="cta-button">View My Work</a>
         </div>
-        <div class="hero-animation">
-            <div class="code-block">
-                <div class="code-line"><span class="code-keyword">const</span> portfolio = {</div>
-                <div class="code-line"><span class="code-property">skills</span>: ['HTML', 'CSS', 'JavaScript']</div>
-                <div class="code-line">}</div>
+        <div class="hero-animation reveal-right">
+            <div class="hero-visual-card">
+                <div class="orbital-ring"></div>
+                <img src="images/Design 1.jpg" alt="Design preview" class="hero-image">
+                <div class="hero-visual-badge">UI/UX • Web Design</div>
             </div>
         </div>
     </section>
@@ -54,7 +67,7 @@
             <h2 class="section-title">About Me</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I'm a passionate developer with 5+ years of experience creating web applications that solve real-world problems. I specialize in front-end development and love turning ideas into beautiful, functional digital experiences.</p>
+                    <p>I'm a passionate developer with 3+ years of experience creating web applications that solve real-world problems. I specialize in front-end development and love turning ideas into beautiful, functional digital experiences.</p>
                     <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or helping others learn web development.</p>
                     <div class="skills-section">
                         <h3>Skills</h3>
@@ -68,6 +81,20 @@
                             <span class="skill-tag">Responsive Design</span>
                             <span class="skill-tag">UI/UX</span>
                         </div>
+                        <div class="skill-charts">
+                            <div class="skill-chart">
+                                <div class="chart-circle" style="--percent: 92%; --color: #2563eb;"><span>92%</span></div>
+                                <h4>Frontend</h4>
+                            </div>
+                            <div class="skill-chart">
+                                <div class="chart-circle" style="--percent: 88%; --color: #dc2626;"><span>88%</span></div>
+                                <h4>TypeScript</h4>
+                            </div>
+                            <div class="skill-chart">
+                                <div class="chart-circle" style="--percent: 85%; --color: #f43f5e;"><span>85%</span></div>
+                                <h4>SEO</h4>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="about-stats">
@@ -80,10 +107,61 @@
                         <p>Happy Clients</p>
                     </div>
                     <div class="stat">
-                        <h3>5+</h3>
+                        <h3>2+</h3>
                         <p>Years Experience</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="section-title">Services</h2>
+            <p class="section-subtitle">SEO-focused digital services designed to grow your brand and improve visibility.</p>
+            <div class="services-grid">
+                <article class="service-card reveal">
+                    <img src="images/Design image 2.jpg" alt="Modern web design concept" class="service-image">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Web Design</h3>
+                    <p>Clean, modern interfaces tailored to your brand and audience.</p>
+                    <a href="services.html?service=design" class="service-link" target="_blank" rel="noopener noreferrer">Learn more about web design</a>
+                </article>
+                <article class="service-card reveal">
+                    <img src="images/Design Image 3.jpg" alt="TypeScript application development" class="service-image">
+                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+                    <h3>TypeScript Development</h3>
+                    <p>Responsive, scalable web apps built with reliable TypeScript architecture.</p>
+                    <a href="services.html?service=typescript" class="service-link" target="_blank" rel="noopener noreferrer">Learn more about TypeScript</a>
+                </article>
+                <article class="service-card reveal">
+                    <img src="images/Design 1.jpg" alt="SEO optimization and growth strategy" class="service-image">
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>SEO Optimization</h3>
+                    <p>Search-friendly structures and content strategies to improve online visibility.</p>
+                    <a href="services.html?service=seo" class="service-link" target="_blank" rel="noopener noreferrer">Learn more about SEO</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">From the Blog</h2>
+            <p class="section-subtitle">Practical ideas for modern web products, Node.js APIs, and search visibility.</p>
+            <div class="blog-grid">
+                <article class="blog-card reveal">
+                    <h3>Why Node.js powers modern apps</h3>
+                    <p>Discover how Node.js helps teams build fast, scalable backends for today's digital products.</p>
+                    <a href="blog.html" class="service-link" target="_blank" rel="noopener noreferrer">Read the article</a>
+                </article>
+                <article class="blog-card reveal">
+                    <h3>SEO tips for modern portfolios</h3>
+                    <p>Learn how structure, speed, and content planning can improve your website's discoverability.</p>
+                    <a href="blog.html" class="service-link" target="_blank" rel="noopener noreferrer">Read the article</a>
+                </article>
             </div>
         </div>
     </section>
@@ -97,8 +175,8 @@
                 <div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
                     <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with product catalog, shopping cart, and payment integration.</p>
+                        <h3>Node.js Commerce Platform</h3>
+                        <p>A full-stack e-commerce solution with a Node.js backend, product catalog, shopping cart, and payments.</p>
                         <div class="project-tags">
                             <span class="tag">React</span>
                             <span class="tag">Node.js</span>
@@ -133,10 +211,10 @@
                 <div class="project-card">
                     <div class="project-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
                     <div class="project-content">
-                        <h3>Weather Dashboard</h3>
-                        <p>Real-time weather application with location-based forecasts and beautiful visualizations.</p>
+                        <h3>TypeScript Dashboard</h3>
+                        <p>Real-time analytics dashboard built with TypeScript and modern UI patterns.</p>
                         <div class="project-tags">
-                            <span class="tag">JavaScript</span>
+                            <span class="tag">TypeScript</span>
                             <span class="tag">API Integration</span>
                             <span class="tag">CSS Animations</span>
                         </div>
@@ -180,7 +258,7 @@
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h3>Email</h3>
-                            <a href="mailto:john@example.com">john@example.com</a>
+                            <a href="mailto:buildreadydigital@gmail.com">buildreadydigital@gmail.com</a>
                         </div>
                     </div>
                     <div class="info-item">
@@ -233,7 +311,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 John Developer. All rights reserved.</p>
+            <p>&copy; 2026 Darwin Developer. All rights reserved.</p>
         </div>
     </footer>
 
