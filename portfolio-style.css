@@ -399,6 +399,97 @@ body.light-mode {
     gap: 2rem;
 }
 
+/* Global circular icons */
+.icon,
+img.icon,
+.logo img,
+.brand-mark,
+.brand-mark img,
+.avatar,
+.profile-pic,
+.site-icon {
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    object-fit: cover;
+    display: inline-block;
+}
+
+/* Ensure square display for circular masks when size not specified */
+.icon,
+img.icon,
+.logo img,
+.avatar,
+.profile-pic,
+.site-icon {
+    width: 54px;
+    height: 54px;
+}
+
+/* Hero profile styles */
+.hero-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+}
+
+.hero .profile-pic {
+    width: 120px !important;
+    height: 120px !important;
+    border-radius: 50% !important;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.45), 0 6px 18px rgba(37,99,235,0.08);
+    border: 4px solid rgba(255,255,255,0.06);
+}
+
+.profile-meta {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.profile-tag {
+    margin-top: 0.25rem;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(220,38,38,0.06));
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    display: inline-block;
+}
+
+/* Apply same profile tag styling site-wide when used */
+.profile-tag-global {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-secondary);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(220,38,38,0.06));
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+}
+
+/* Target common logo images by filename or alt text to ensure circular appearance */
+img[src*="logo" i],
+img[src*="Favicon" i],
+img[alt*="Logo" i] {
+    border-radius: 50% !important;
+    overflow: hidden !important;
+    object-fit: cover !important;
+    display: inline-block;
+    width: 54px;
+    height: 54px;
+}
+
 .service-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
