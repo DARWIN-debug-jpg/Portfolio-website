@@ -151,6 +151,35 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
     // Add fade-in effect to page on load
     document.body.style.animation = 'fadeInUp 0.5s ease-out';
+
+    const solarCenter = document.querySelector('.solar-center');
+    if (solarCenter) {
+        const label = solarCenter.dataset.centerText;
+        const centerLabel = solarCenter.querySelector('.center-label');
+        if (label && centerLabel) {
+            centerLabel.textContent = label;
+        }
+    }
+
+    const orbits = document.querySelectorAll('.orbit');
+    const planets = document.querySelectorAll('.planet');
+
+    planets.forEach(planet => {
+        const orbit = planet.closest('.orbit');
+
+        const pauseOrbit = () => {
+            if (orbit) orbit.classList.add('paused');
+        };
+
+        const resumeOrbit = () => {
+            if (orbit) orbit.classList.remove('paused');
+        };
+
+        planet.addEventListener('mouseenter', pauseOrbit);
+        planet.addEventListener('mouseleave', resumeOrbit);
+        planet.addEventListener('focus', pauseOrbit);
+        planet.addEventListener('blur', resumeOrbit);
+    });
 });
 
 // ============================================

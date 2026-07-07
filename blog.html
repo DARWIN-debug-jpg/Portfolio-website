@@ -5,14 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog | BUILD READY DIGITAL</title>
     <link rel="stylesheet" href="portfolio-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="images/Build Ready logo 2.png">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="images/Build Ready logo 2.png" alt="BuildReadyDigital Logo" style="height: 70px; width: auto; margin-right: 0.2rem;">
-                <span style="font-size: 1.8rem; font-weight: bold; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: flex; align-items: center;">BUILD READY DIGITAL</span>
+                <div class="brand-mark">
+                    <img src="images/Build Ready logo 2.png" alt="BuildReadyDigital Logo">
+                </div>
+                <span class="brand-name">BUILD READY DIGITAL</span>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link" target="_blank" rel="noopener noreferrer">Home</a></li>
@@ -21,6 +24,16 @@
                 <li class="nav-item"><a href="blog.html" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
                 <li class="nav-item"><a href="app.html" class="nav-link" target="_blank" rel="noopener noreferrer">Contact</a></li>
             </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -45,5 +58,13 @@
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BUILD READY DIGITAL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="portfolio-script.js"></script>
 </body>
 </html>

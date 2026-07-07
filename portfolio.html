@@ -25,11 +25,10 @@
                 <span class="brand-name">BUILD READY DIGITAL</span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link" target="_blank" rel="noopener noreferrer">Home</a></li>
-                <li class="nav-item"><a href="portfolio.html#about" class="nav-link" target="_blank" rel="noopener noreferrer">About</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link" target="_blank" rel="noopener noreferrer">Services</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
-                <li class="nav-item"><a href="app.html" class="nav-link" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
@@ -54,7 +53,7 @@
                     <div class="profile-tag">FOUNDER &amp; CEO — BUILD READY DIGITAL</div>
                 </div>
             </div>
-            <h1 class="hero-title">Hi, I'm <span class="highlight">DARWIN Developer</span></h1>
+            <h1 class="hero-title">Hello, I'm <span class="highlight">DARWIN, Developer</span></h1>
             <p class="hero-subtitle">Full Stack Developer | Creative Problem Solver</p>
             <p class="hero-description">I build beautiful, responsive websites and applications that feel premium and perform flawlessly.</p>
             <a href="#projects" class="cta-button">View My Work</a>
@@ -76,6 +75,16 @@
                 <div class="about-text">
                     <p>I'm a passionate developer with 3+ years of experience creating web applications that solve real-world problems. I specialize in front-end development and love turning ideas into beautiful, functional digital experiences.</p>
                     <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or helping others learn web development.</p>
+                    <div class="vision-mission-section">
+                        <div class="vision-mission-card">
+                            <h3>Vision</h3>
+                            <p>To create digital products that inspire trust, accelerate growth, and deliver meaningful experiences for every user.</p>
+                        </div>
+                        <div class="vision-mission-card">
+                            <h3>Mission</h3>
+                            <p>To build accessible, high-performing web solutions with clear design, thoughtful strategy, and measurable results.</p>
+                        </div>
+                    </div>
                     <div class="skills-section">
                         <h3>Skills</h3>
                         <div class="skills-grid">
@@ -123,72 +132,140 @@
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services" aria-labelledby="services-title">
+    <!-- Skills Section -->
+    <section id="skills" class="skills-solar" aria-labelledby="skills-title">
         <div class="container">
-            <h2 id="services-title" class="section-title">Services</h2>
-            <p class="section-subtitle">SEO-focused digital services designed to grow your brand and improve visibility.</p>
-            <div class="services-grid">
-                <article class="service-card reveal">
-                    <img src="images/Design image 2.jpg" alt="Modern web design concept" class="service-image">
-                    <div class="service-icon"><i class="fas fa-palette"></i></div>
-                    <h3>Web Design</h3>
-                    <p>Clean, modern interfaces tailored to your brand and audience.</p>
-                    <a href="services.html?service=design" class="service-link" target="_blank" rel="noopener noreferrer">Learn more about web design</a>
-                </article>
-                <article class="service-card reveal">
-                    <img src="images/Design Image 3.jpg" alt="TypeScript application development" class="service-image">
-                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>TypeScript Development</h3>
-                    <p>Responsive, scalable web apps built with reliable TypeScript architecture.</p>
-                    <a href="services.html?service=typescript" class="service-link" target="_blank" rel="noopener noreferrer">Learn more about TypeScript</a>
-                </article>
-                <article class="service-card reveal">
-                    <img src="images/Design 1.jpg" alt="SEO optimization and growth strategy" class="service-image">
-                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>SEO Optimization</h3>
-                    <p>Search-friendly structures and content strategies to improve online visibility.</p>
-                    <a href="services.html?service=seo" class="service-link" target="_blank" rel="noopener noreferrer">Learn more about SEO</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Personal Image Section -->
-    <section id="personal-image" class="about">
-        <div class="container">
-            <h2 class="section-title">Personal Shot</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>This is the profile image used throughout the site for a stronger personal brand connection.</p>
+            <h2 id="skills-title" class="section-title">Skills</h2>
+            <p class="section-subtitle">A premium solar-system-inspired skills hub that highlights my full stack expertise.</p>
+            <div class="solar-system" aria-label="Interactive skills solar system">
+                <div class="stars" aria-hidden="true"></div>
+                <div class="shooting-star star-1" aria-hidden="true"></div>
+                <div class="shooting-star star-2" aria-hidden="true"></div>
+                <div class="shooting-star star-3" aria-hidden="true"></div>
+                <div class="particles" aria-hidden="true">
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
                 </div>
-                <div class="about-stats">
-                    <div class="service-card reveal">
-                        <img src="images/Build Ready logo 2.png" alt="Build Ready logo" class="service-image">
-                        <h3>Profile Photo</h3>
-                        <p>High-quality image used for the hero profile, styled for visual impact.</p>
-                    </div>
+                <div class="solar-center" data-center-text="Full Stack Developer">
+                    <span class="center-label">Full Stack Developer</span>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">From the Blog</h2>
-            <p class="section-subtitle">Practical ideas for modern web products, Node.js APIs, and search visibility.</p>
-            <div class="blog-grid">
-                <article class="blog-card reveal">
-                    <h3>Why Node.js powers modern apps</h3>
-                    <p>Discover how Node.js helps teams build fast, scalable backends for today's digital products.</p>
-                    <a href="blog.html" class="service-link" target="_blank" rel="noopener noreferrer">Read the article</a>
-                </article>
-                <article class="blog-card reveal">
-                    <h3>SEO tips for modern portfolios</h3>
-                    <p>Learn how structure, speed, and content planning can improve your website's discoverability.</p>
-                    <a href="blog.html" class="service-link" target="_blank" rel="noopener noreferrer">Read the article</a>
-                </article>
+                <div class="orbit orbit-1" aria-hidden="true">
+                    <button class="planet" type="button" aria-label="HTML5 skill, Expert level, Semantic markup and accessible structure" aria-describedby="tooltip-html5">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-html5"></i></span>
+                            <span class="planet-label">HTML5</span>
+                            <span class="planet-tooltip" id="tooltip-html5">
+                                <strong>Expert</strong>
+                                <p>Semantic markup and accessible structure for modern web applications.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 120deg;" aria-label="CSS3 skill, Advanced level, Modern responsive styling and animations" aria-describedby="tooltip-css3">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-css3-alt"></i></span>
+                            <span class="planet-label">CSS3</span>
+                            <span class="planet-tooltip" id="tooltip-css3">
+                                <strong>Advanced</strong>
+                                <p>Responsive layouts, animations, and polished visual systems.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 240deg;" aria-label="JavaScript skill, Advanced level, Interactive client-side experiences" aria-describedby="tooltip-js">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-js"></i></span>
+                            <span class="planet-label">JavaScript</span>
+                            <span class="planet-tooltip" id="tooltip-js">
+                                <strong>Advanced</strong>
+                                <p>Dynamic interfaces, browser APIs, and performant frontend logic.</p>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="orbit orbit-2" aria-hidden="true">
+                    <button class="planet" type="button" aria-label="React skill, Advanced level, Component-driven UI architecture" aria-describedby="tooltip-react">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-react"></i></span>
+                            <span class="planet-label">React</span>
+                            <span class="planet-tooltip" id="tooltip-react">
+                                <strong>Advanced</strong>
+                                <p>Reusable component design and state-driven application flow.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 140deg;" aria-label="Node.js skill, Advanced level, Scalable backend solutions" aria-describedby="tooltip-node">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-node-js"></i></span>
+                            <span class="planet-label">Node.js</span>
+                            <span class="planet-tooltip" id="tooltip-node">
+                                <strong>Advanced</strong>
+                                <p>Server-side JavaScript, APIs, and full stack integration.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 260deg;" aria-label="GitHub skill, Advanced level, Collaborative version control and workflow" aria-describedby="tooltip-github">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-github"></i></span>
+                            <span class="planet-label">GitHub</span>
+                            <span class="planet-tooltip" id="tooltip-github">
+                                <strong>Advanced</strong>
+                                <p>Version control, collaboration, and polished repository management.</p>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="orbit orbit-3" aria-hidden="true">
+                    <button class="planet" type="button" aria-label="MongoDB skill, Intermediate level, NoSQL database design for flexible data" aria-describedby="tooltip-mongo">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fas fa-database"></i></span>
+                            <span class="planet-label">MongoDB</span>
+                            <span class="planet-tooltip" id="tooltip-mongo">
+                                <strong>Intermediate</strong>
+                                <p>NoSQL collections, schema design, and fast document queries.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 110deg;" aria-label="MySQL skill, Intermediate level, Structured relational database modeling" aria-describedby="tooltip-mysql">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fas fa-server"></i></span>
+                            <span class="planet-label">MySQL</span>
+                            <span class="planet-tooltip" id="tooltip-mysql">
+                                <strong>Intermediate</strong>
+                                <p>Relational queries, normalization, and production-ready database systems.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 220deg;" aria-label="Python skill, Intermediate level, Scripting and automation for backend workflows" aria-describedby="tooltip-python">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-python"></i></span>
+                            <span class="planet-label">Python</span>
+                            <span class="planet-tooltip" id="tooltip-python">
+                                <strong>Intermediate</strong>
+                                <p>Scripting, automation, and backend utilities for data-driven products.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 330deg;" aria-label="Express skill, Intermediate level, Minimal backend routing and middleware" aria-describedby="tooltip-express">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fas fa-stream"></i></span>
+                            <span class="planet-label">Express</span>
+                            <span class="planet-tooltip" id="tooltip-express">
+                                <strong>Intermediate</strong>
+                                <p>Fast API routing, middleware orchestration, and Node.js backend services.</p>
+                            </span>
+                        </span>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -211,7 +288,6 @@
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Project</a>
-                            <a href="#" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -229,7 +305,6 @@
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Project</a>
-                            <a href="#" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -247,7 +322,6 @@
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Project</a>
-                            <a href="#" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -265,7 +339,6 @@
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Project</a>
-                            <a href="#" class="project-link">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -334,6 +407,66 @@
             </div>
         </div>
     </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="section-title">Services</h2>
+            <p class="section-subtitle">Premium digital services to grow your brand and product.</p>
+            <div class="services-grid">
+                <article class="service-card reveal">
+                    <div class="service-image" style="height:140px; background: linear-gradient(135deg, rgba(37,99,235,0.18), rgba(244,63,94,0.12)); border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Web Design</h3>
+                    <p>Clean, modern interfaces tailored to your brand and audience.</p>
+                    <a href="services.html?service=design" class="service-link">Learn more about web design</a>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-image" style="height:140px; background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(37,99,235,0.08)); border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>SEO Optimization</h3>
+                    <p>Search-friendly structures and content strategies to improve online visibility.</p>
+                    <a href="services.html?service=seo" class="service-link">Learn more about SEO</a>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-image" style="height:140px; background: linear-gradient(135deg, rgba(102,126,234,0.12), rgba(247,127,0,0.08)); border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>App Development</h3>
+                    <p>Cross-platform mobile and web apps built for performance and scale.</p>
+                    <a href="services.html?service=app" class="service-link">Learn more about app development</a>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-image" style="height:140px; background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(236,72,153,0.08)); border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Social Media Management</h3>
+                    <p>Audience growth, content strategy, and campaign analytics for social channels.</p>
+                    <a href="services.html?service=social" class="service-link">Learn more about social media</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <h2 class="section-title">From the Blog</h2>
+            <p class="section-subtitle">Practical ideas for modern web products, Node.js APIs, and search visibility.</p>
+            <div class="blog-grid">
+                <article class="blog-card reveal">
+                    <h3>Why Node.js powers modern apps</h3>
+                    <p>Discover how Node.js helps teams build fast, scalable backends for today's digital products.</p>
+                    <a href="blog.html" class="service-link" target="_blank" rel="noopener noreferrer">Read the article</a>
+                </article>
+                <article class="blog-card reveal">
+                    <h3>SEO tips for modern portfolios</h3>
+                    <p>Learn how structure, speed, and content planning can improve your website's discoverability.</p>
+                    <a href="blog.html" class="service-link" target="_blank" rel="noopener noreferrer">Read the article</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    
 
     <!-- Footer -->
     <footer class="footer">
