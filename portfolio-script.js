@@ -1,225 +1,320 @@
-// ============================================
-// MOBILE MENU TOGGLE
-// ============================================
-const hamburger = document.getElementById('hamburger');
-const navMenu = document.querySelector('.nav-menu');
-const themeToggle = document.getElementById('themeToggle');
+/*==================================================
+BUILD READY DIGITAL
+Main JavaScript
+==================================================*/
 
-if (hamburger) {
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-}
+document.addEventListener("DOMContentLoaded", () => {
 
-if (themeToggle) {
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'light') {
-        document.body.classList.add('light-mode');
-        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-    }
+    /*=========================================
+      MOBILE NAVIGATION
+    =========================================*/
 
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        const isLight = document.body.classList.contains('light-mode');
-        localStorage.setItem('theme', isLight ? 'light' : 'dark');
-        themeToggle.innerHTML = isLight ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
-    });
-}
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector(".nav-menu");
 
-// Close menu when a nav link is clicked
-document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
-        hamburger.classList.remove('active');
-        navMenu.classList.remove('active');
-    });
-});
+    if (hamburger && navMenu) {
 
-// ============================================
-// SMOOTH SCROLL
-// ============================================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+        hamburger.addEventListener("click", () => {
+            hamburger.classList.toggle("active");
+            navMenu.classList.toggle("active");
+        });
+
+        document.querySelectorAll(".nav-link").forEach(link => {
+
+            link.addEventListener("click", () => {
+                hamburger.classList.remove("active");
+                navMenu.classList.remove("active");
             });
-        }
-    });
-});
 
-// ============================================
-// FORM SUBMISSION
-// ============================================
-const contactForm = document.getElementById('contactForm');
+        });
 
-if (contactForm) {
-    contactForm.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        // Get form values
-        const inputs = this.querySelectorAll('input, textarea');
-        const formData = new FormData(this);
-        
-        // Show success message
-        const submitBtn = this.querySelector('.submit-btn');
-        const originalText = submitBtn.textContent;
-        submitBtn.textContent = '✓ Message Sent!';
-        submitBtn.style.background = 'linear-gradient(135deg, #43e97b, #38f9d7)';
-        
-        // Reset form
-        this.reset();
-        
-        // Restore button after 3 seconds
-        setTimeout(() => {
-            submitBtn.textContent = originalText;
-            submitBtn.style.background = '';
-        }, 3000);
-    });
-}
-
-// ============================================
-// SCROLL REVEAL ANIMATION
-// ============================================
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            revealObserver.unobserve(entry.target);
-        }
-    });
-}, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
-});
-
-document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .project-card, .stat, .info-item, .service-card').forEach((element) => {
-    revealObserver.observe(element);
-});
-
-// ============================================
-// NAVBAR BACKGROUND ON SCROLL
-// ============================================
-window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.style.backgroundColor = 'rgba(15, 15, 30, 0.98)';
-        navbar.style.boxShadow = '0 2px 20px rgba(102, 126, 234, 0.1)';
-    } else {
-        navbar.style.backgroundColor = 'rgba(15, 15, 30, 0.95)';
-        navbar.style.boxShadow = 'none';
-    }
-});
-
-// ============================================
-// ADD STAGGERED ANIMATION TO PROJECT CARDS
-// ============================================
-const projectCards = document.querySelectorAll('.project-card');
-projectCards.forEach((card, index) => {
-    card.style.animationDelay = `${index * 0.1}s`;
-});
-
-// ============================================
-// ACTIVE NAV LINK ON SCROLL
-// ============================================
-window.addEventListener('scroll', () => {
-    let current = '';
-    const sections = document.querySelectorAll('section');
-    
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
-
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
-        }
-    });
-});
-
-// ============================================
-// PRELOAD ANIMATIONS
-// ============================================
-window.addEventListener('load', () => {
-    // Add fade-in effect to page on load
-    document.body.style.animation = 'fadeInUp 0.5s ease-out';
-
-    const solarCenter = document.querySelector('.solar-center');
-    if (solarCenter) {
-        const label = solarCenter.dataset.centerText;
-        const centerLabel = solarCenter.querySelector('.center-label');
-        if (label && centerLabel) {
-            centerLabel.textContent = label;
-        }
     }
 
-    const orbits = document.querySelectorAll('.orbit');
-    const planets = document.querySelectorAll('.planet');
+    /*=========================================
+      STICKY NAVBAR
+    =========================================*/
+
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", () => {
+
+        if (!navbar) return;
+
+        if (window.scrollY > 60) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+
+    });
+
+    /*=========================================
+      REVEAL ANIMATION
+    =========================================*/
+
+    const revealItems = document.querySelectorAll(
+        ".reveal,.reveal-left,.reveal-right"
+    );
+
+    if (revealItems.length > 0) {
+
+        const revealObserver = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("active");
+
+                }
+
+            });
+
+        }, {
+
+            threshold: 0.15
+
+        });
+
+        revealItems.forEach(item => {
+
+            revealObserver.observe(item);
+
+        });
+
+    }
+
+    /*=========================================
+      COUNTERS
+    =========================================*/
+
+    const counters = document.querySelectorAll(".counter");
+
+    if (counters.length > 0) {
+
+        const counterObserver = new IntersectionObserver((entries, observer) => {
+
+            entries.forEach(entry => {
+
+                if (!entry.isIntersecting) return;
+
+                const counter = entry.target;
+
+                const target = Number(counter.dataset.target);
+
+                let count = 0;
+
+                const speed = target / 80;
+
+                const updateCounter = () => {
+
+                    if (count < target) {
+
+                        count += speed;
+
+                        counter.innerText = Math.ceil(count);
+
+                        requestAnimationFrame(updateCounter);
+
+                    } else {
+
+                        counter.innerText = target + "+";
+
+                    }
+
+                };
+
+                updateCounter();
+
+                observer.unobserve(counter);
+
+            });
+
+        });
+
+        counters.forEach(counter => {
+
+            counterObserver.observe(counter);
+
+        });
+
+    }
+
+    /*=========================================
+      ACTIVE NAVIGATION
+    =========================================*/
+
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    window.addEventListener("scroll", () => {
+
+        let current = "";
+
+        sections.forEach(section => {
+
+            const sectionTop = section.offsetTop - 120;
+
+            if (window.pageYOffset >= sectionTop) {
+
+                current = section.getAttribute("id");
+
+            }
+
+        });
+
+        navLinks.forEach(link => {
+
+            link.classList.remove("active");
+
+            if (link.getAttribute("href") === "#" + current) {
+
+                link.classList.add("active");
+
+            }
+
+        });
+
+    });
+
+    /*=========================================
+      SMOOTH SCROLL
+    =========================================*/
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+
+        anchor.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute("href"));
+
+            if (target) {
+
+                target.scrollIntoView({
+
+                    behavior: "smooth"
+
+                });
+
+            }
+
+        });
+
+    });
+
+    /*=========================================
+      CONTACT FORM
+    =========================================*/
+
+    const form = document.getElementById("contactForm");
+
+    const submitBtn = document.getElementById("submitBtn");
+
+    if (form && submitBtn) {
+
+        form.addEventListener("submit", function (e) {
+
+            e.preventDefault();
+
+            submitBtn.innerHTML =
+                '<i class="fas fa-check"></i> Message Sent';
+
+            submitBtn.style.background = "#16a34a";
+
+            setTimeout(() => {
+
+                submitBtn.innerHTML =
+                    '<i class="fas fa-paper-plane"></i> <span>Send Message</span>';
+
+                submitBtn.style.background = "";
+
+                form.reset();
+
+            }, 3000);
+
+        });
+
+    }
+
+    /*=========================================
+      SCROLL PROGRESS BAR
+    =========================================*/
+
+    const progressBar = document.getElementById("progressBar");
+
+    if (progressBar) {
+
+        window.addEventListener("scroll", () => {
+
+            const scrollTop = document.documentElement.scrollTop;
+
+            const height =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+
+            const progress = (scrollTop / height) * 100;
+
+            progressBar.style.width = progress + "%";
+
+        });
+
+    }
+
+    /*=========================================
+      THEME TOGGLE
+    =========================================*/
+
+    const themeToggle = document.getElementById("themeToggle");
+
+    if (themeToggle) {
+
+        themeToggle.addEventListener("click", () => {
+
+            document.body.classList.toggle("light-mode");
+
+            const icon = themeToggle.querySelector("i");
+
+            if (icon) {
+
+                if (document.body.classList.contains("light-mode")) {
+
+                    icon.classList.remove("fa-moon");
+                    icon.classList.add("fa-sun");
+
+                } else {
+
+                    icon.classList.remove("fa-sun");
+                    icon.classList.add("fa-moon");
+
+                }
+
+            }
+
+        });
+
+    }
+
+    /*=========================================
+      PLANET HOVER
+    =========================================*/
+
+    const planets = document.querySelectorAll(".planet");
 
     planets.forEach(planet => {
-        const orbit = planet.closest('.orbit');
 
-        const pauseOrbit = () => {
-            if (orbit) orbit.classList.add('paused');
-        };
+        planet.addEventListener("mouseenter", () => {
 
-        const resumeOrbit = () => {
-            if (orbit) orbit.classList.remove('paused');
-        };
+            planet.style.transform = "scale(1.15)";
 
-        planet.addEventListener('mouseenter', pauseOrbit);
-        planet.addEventListener('mouseleave', resumeOrbit);
-        planet.addEventListener('focus', pauseOrbit);
-        planet.addEventListener('blur', resumeOrbit);
+        });
+
+        planet.addEventListener("mouseleave", () => {
+
+            planet.style.transform = "";
+
+        });
+
     });
+
 });
-
-// ============================================
-// TYPING ANIMATION (Optional enhancement)
-// ============================================
-const typeWriter = (element, text, speed = 50) => {
-    let i = 0;
-    element.textContent = '';
-    
-    const type = () => {
-        if (i < text.length) {
-            element.textContent += text.charAt(i);
-            i++;
-            setTimeout(type, speed);
-        }
-    };
-    
-    type();
-};
-
-// Optional: Uncomment to enable typing animation on hero title
-// const heroTitle = document.querySelector('.hero-title');
-// if (heroTitle) {
-//     const originalText = heroTitle.textContent;
-//     typeWriter(heroTitle, originalText, 30);
-// }
-
-// ============================================
-// PARALLAX EFFECT (Optional enhancement)
-// ============================================
-window.addEventListener('scroll', () => {
-    const heroContent = document.querySelector('.hero-content');
-    if (heroContent) {
-        const scrolled = window.pageYOffset;
-        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
-    }
-});
-
-// ============================================
-// CONSOLE MESSAGE
-// ============================================
-console.log('%cWelcome to My Portfolio! 👋', 'font-size: 20px; color: #667eea; font-weight: bold;');
-console.log('%cLooking for the source code? Check out my GitHub!', 'font-size: 14px; color: #a1a1a1;');

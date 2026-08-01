@@ -15,6 +15,7 @@
     <link rel="icon" type="image/x-icon" href="images/Build Ready logo 2.png">
 </head>
 <body>
+    <div id="progressBar" class="progress-bar"></div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -27,6 +28,7 @@
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
                 <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -43,100 +45,236 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content reveal-left">
-            <div class="hero-profile">
-                <img src="images/Profile image edit.jpg" alt="Profile photo of Darwin Developer" class="profile-pic">
-                <div class="profile-meta">
-                    <div class="profile-name">DARWIN ADHOLA</div>
-                    <div class="profile-tag">FOUNDER &amp; CEO — BUILD READY DIGITAL</div>
-                </div>
-            </div>
-            <h1 class="hero-title">Hello, I'm <span class="highlight">DARWIN, Developer</span></h1>
-            <p class="hero-subtitle">Full Stack Developer | Creative Problem Solver</p>
-            <p class="hero-description">I build beautiful, responsive websites and applications that feel premium and perform flawlessly.</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-        <div class="hero-animation reveal-right">
-            <div class="hero-visual-card">
-                <div class="orbital-ring"></div>
-                <img src="images/Design 1.jpg" alt="Design preview" class="hero-image">
-                <div class="hero-visual-badge">UI/UX • Web Design</div>
-            </div>
-        </div>
-    </section>
+    <!-- ================= HERO ================= -->
+<section id="home" class="hero">
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate developer with 3+ years of experience creating web applications that solve real-world problems. I specialize in front-end development and love turning ideas into beautiful, functional digital experiences.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or helping others learn web development.</p>
-                    <div class="vision-mission-section">
-                        <div class="vision-mission-card">
-                            <h3>Vision</h3>
-                            <p>To create digital products that inspire trust, accelerate growth, and deliver meaningful experiences for every user.</p>
-                        </div>
-                        <div class="vision-mission-card">
-                            <h3>Mission</h3>
-                            <p>To build accessible, high-performing web solutions with clear design, thoughtful strategy, and measurable results.</p>
-                        </div>
-                    </div>
-                    <div class="skills-section">
-                        <h3>Skills</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Responsive Design</span>
-                            <span class="skill-tag">UI/UX</span>
-                        </div>
-                        <div class="skill-charts">
-                            <div class="skill-chart">
-                                <div class="chart-circle" style="--percent: 92%; --color: #2563eb;"><span>92%</span></div>
-                                <h4>Frontend</h4>
-                            </div>
-                            <div class="skill-chart">
-                                <div class="chart-circle" style="--percent: 88%; --color: #dc2626;"><span>88%</span></div>
-                                <h4>TypeScript</h4>
-                            </div>
-                            <div class="skill-chart">
-                                <div class="chart-circle" style="--percent: 85%; --color: #f43f5e;"><span>85%</span></div>
-                                <h4>SEO</h4>
-                            </div>
-                        </div>
-                    </div>
+    <!-- Background -->
+    <div class="hero-background">
+        <img src="images/Design 1.jpg" alt="">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Floating Shapes -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <div class="hero-content reveal-left">
+
+        <div class="hero-profile">
+
+            <img src="images/Profile-image-edit2.jpg"
+                 alt="Darwin"
+                 class="profile-pic">
+
+            <div class="profile-meta">
+                <div class="profile-name">
+                    DARWIN ADHOLA
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>50+</h3>
-                        <p>Projects Completed</p>
+
+                <div class="profile-tag">
+                    Founder • Build Ready Digital
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="hero-title">
+
+            Building
+            <span>Beautiful Websites</span>
+
+            that Grow Businesses.
+
+        </h1>
+
+        <p class="hero-description">
+
+            We design modern websites, web applications,
+            SEO strategies and digital experiences that
+            help businesses stand out online.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="cta-button">
+                View Projects
+            </a>
+
+            <a href="#contact" class="secondary-button">
+                Let's Talk
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-animation reveal-right">
+
+        <div class="glass-card">
+
+            <img src="images/Design Image 3.jpg" alt="Website Design Example"
+                 class="hero-image">
+
+            <div class="hero-badge">
+
+                <i class="fas fa-code"></i>
+
+                Modern Web Development
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- ================= ABOUT SECTION ================= -->
+<section id="about" class="about">
+
+    <div class="container">
+
+        <h2 class="section-title">About Build Ready Digital</h2>
+
+        <div class="about-content">
+
+            <!-- Left Side -->
+            <div class="about-text">
+
+                <h3>Building Digital Experiences That Drive Growth</h3>
+
+                <p>
+                    At <strong>Build Ready Digital</strong>, we create modern websites,
+                    web applications, and digital experiences that help businesses
+                    establish a powerful online presence. Every project is designed with
+                    performance, responsiveness, security and user experience in mind.
+                </p>
+
+                <p>
+                    We believe a website should do more than look beautiful—it should
+                    generate leads, build trust, and convert visitors into customers.
+                    Through creative design, clean code, and SEO best practices, we
+                    help businesses grow online with confidence.
+                </p>
+
+                <!-- Vision & Mission -->
+                <div class="vision-mission-section">
+
+                    <div class="vision-mission-card">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+
+                        <h3>Our Vision</h3>
+
+                        <p>
+                            To become a trusted digital partner that empowers businesses
+                            through innovative websites and digital solutions that
+                            inspire growth and long-term success.
+                        </p>
+
                     </div>
-                    <div class="stat">
-                        <h3>30+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                    <div class="stat">
-                        <h3>2+</h3>
-                        <p>Years Experience</p>
+
+                    <div class="vision-mission-card">
+
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+
+                        <h3>Our Mission</h3>
+
+                        <p>
+                            To build fast, secure and user-focused digital products that
+                            combine modern design, exceptional performance and measurable
+                            business results.
+                        </p>
+
                     </div>
 
                 </div>
+
+                <!-- Why Choose Us -->
+                <section class="why-us">
+
+                    <h2 class="section-title">
+                        Why Choose Build Ready Digital
+                    </h2>
+
+                    <div class="why-grid">
+
+                        <div class="why-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Lightning Fast</h3>
+                            <p>
+                                Optimized websites that load quickly and improve user experience.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <i class="fas fa-search"></i>
+                            <h3>SEO Ready</h3>
+                            <p>
+                                Built with search engine optimization from day one.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsive Design</h3>
+                            <p>
+                                Beautiful layouts across desktops, tablets and mobile devices.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <i class="fas fa-lock"></i>
+                            <h3>Secure</h3>
+                            <p>
+                                Modern coding practices for security, reliability and performance.
+                            </p>
+                        </div>
+
+                    </div>
+
+                </section>
+
             </div>
+
+            <!-- Right Side Statistics -->
+            <div class="about-stats">
+
+                <div class="stat">
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Projects Completed</p>
+                </div>
+
+                <div class="stat">
+                    <h3 class="counter" data-target="30">0</h3>
+                    <p>Happy Clients</p>
+                </div>
+
+                <div class="stat">
+                    <h3 class="counter" data-target="2">0</h3>
+                    <p>Years Experience</p>
+                </div>
+
+            </div>
+
         </div>
-    </section>
+
+    </div>
+
+</section>
+<!-- ================= END ABOUT ================= -->
+    
 
     <!-- Skills Section -->
     <section id="skills" class="skills-solar" aria-labelledby="skills-title">
         <div class="container">
             <h2 id="skills-title" class="section-title">Skills</h2>
-            <p class="section-subtitle">A premium solar-system-inspired skills hub that highlights my full stack expertise.</p>
+            <p class="section-subtitle">A versatile skill set focused on creating fast, modern, and user-friendly solutions.</p>
             <div class="solar-system" aria-label="Interactive skills solar system">
                 <div class="stars" aria-hidden="true"></div>
                 <div class="shooting-star star-1" aria-hidden="true"></div>
@@ -269,7 +407,75 @@
             </div>
         </div>
     </section>
-
+    <!-- Services Section -->
+    <section id="services" class="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="section-title">Services</h2>
+            <p class="section-subtitle">Premium digital services to grow your brand and product.</p>
+            <div class="services-grid">
+                <article class="service-card reveal">
+                    <div class="service-image"
+     style=
+        "height:250px;
+        background:
+            linear-gradient(rgba(37,99,235,0.2), rgba(244,63,94,0.2)),
+            url('images/Web\ design\ 2.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Web Design</h3>
+                    <p>Clean, modern interfaces tailored to your brand and audience.</p>
+                    <a href="services.html?service=design" class="service-link">Learn more about web design</a>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-image"
+     style=
+        "height:250px;
+        background:
+            linear-gradient(rgba(37,99,235,0.2), rgba(244,63,94,0.2)),
+            url('images/seo 2.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>SEO Optimization</h3>
+                    <p>Search-friendly structures and content strategies to improve online visibility.</p>
+                    <a href="services.html?service=seo" class="service-link">Learn more about SEO</a>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-image"
+     style=
+        "height:250px;
+        background:
+            linear-gradient(rgba(37,99,235,0.2), rgba(244,63,94,0.2)),
+            url('images/App-development2.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>App Development</h3>
+                    <p>Cross-platform mobile and web apps built for performance and scale.</p>
+                    <a href="services.html?service=app" class="service-link">Learn more about app development</a>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-image"
+     style=
+        "height:250px;
+        background:
+            linear-gradient(rgba(37,99,235,0.2), rgba(244,63,94,0.2)),
+            url('images/social Media 3.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Social Media Management</h3>
+                    <p>Audience growth, content strategy, and campaign analytics for social channels.</p>
+                    <a href="services.html?service=social" class="service-link">Learn more about social media management</a>
+                </article>
+            </div>
+        </div>
+    </section>
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
@@ -277,9 +483,9 @@
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-image" style="background: url('images/E Commerce.jpg') center/cover no-repeat;"></div>
+                    <div class="project-image" style="background: url('images/E-Commerce-1.jpg') center/cover no-repeat;"></div>
                     <div class="project-content">
-                        <h3>Node.js Commerce Platform</h3>
+                        <h3>Commerce Platform</h3>
                         <p>A full-stack e-commerce solution with a Node.js backend, product catalog, shopping cart, and payments.</p>
                         <div class="project-tags">
                             <span class="tag">React</span>
@@ -287,14 +493,14 @@
                             <span class="tag">MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
+                            <a href="http://nyatidigital.com/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-image" style="background: url('images/Task Management app.jpg') center/cover no-repeat;"></div>
+                    <div class="project-image" style="background: url('images/Task-management-app.jpg') center/cover no-repeat;"></div>
                     <div class="project-content">
                         <h3>Task Management App</h3>
                         <p>A productivity tool that helps teams organize and manage their daily tasks efficiently.</p>
@@ -304,14 +510,14 @@
                             <span class="tag">Tailwind</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
+                            <a href="http://nyatidigital.com/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <div class="project-image" style="background: url('images/Dashboard.jpg') center/cover no-repeat;"></div>
+                    <div class="project-image" style="background: url('images/Dashboard\ -Image-2.jpg') center/cover no-repeat;"></div>
                     <div class="project-content">
                         <h3>TypeScript Dashboard</h3>
                         <p>Real-time analytics dashboard built with TypeScript and modern UI patterns.</p>
@@ -328,7 +534,7 @@
 
                 <!-- Project 4 -->
                 <div class="project-card">
-                    <div class="project-image" style="background: url('images/Social Media.jpg') center/cover no-repeat;"></div>
+                    <div class="project-image" style="background: url('images/Social-media-1.jpg') center/cover no-repeat;"></div>
                     <div class="project-content">
                         <h3>Social Media Analytics</h3>
                         <p>Dashboard that aggregates and visualizes data from multiple social media platforms.</p>
@@ -338,142 +544,129 @@
                             <span class="tag">REST API</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
+                            <a href="http://nyatidigital.com/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-subtitle">I'd love to hear from you. Let's connect!</p>
-            
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <a href="mailto:buildreadydigital@gmail.com">buildreadydigital@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <a href="tel:+254113364405">+254 113 364 405</a>
-                        </div>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Location</h3>
-                            <p>NAIROBI,KENYA</p>
-                        </div>
-                    </div>
-                </div>
-
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-
-            <div class="social-links">
-                <a href="#" class="social-icon" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#" class="social-icon" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="#" class="social-icon" title="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon" title="CodePen">
-                    <i class="fab fa-codepen"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services" aria-labelledby="services-title">
-        <div class="container">
-            <h2 id="services-title" class="section-title">Services</h2>
-            <p class="section-subtitle">Premium digital services to grow your brand and product.</p>
-            <div class="services-grid">
-                <article class="service-card reveal">
-                    <div class="service-image" style="height:140px; background: linear-gradient(135deg, rgba(37,99,235,0.18), rgba(244,63,94,0.12)); border-radius:12px;"></div>
-                    <div class="service-icon"><i class="fas fa-palette"></i></div>
-                    <h3>Web Design</h3>
-                    <p>Clean, modern interfaces tailored to your brand and audience.</p>
-                    <a href="services.html?service=design" class="service-link">Learn more about web design</a>
-                </article>
-                <article class="service-card reveal">
-                    <div class="service-image" style="height:140px; background: linear-gradient(135deg, rgba(16,185,129,0.12), rgba(37,99,235,0.08)); border-radius:12px;"></div>
-                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
-                    <h3>SEO Optimization</h3>
-                    <p>Search-friendly structures and content strategies to improve online visibility.</p>
-                    <a href="services.html?service=seo" class="service-link">Learn more about SEO</a>
-                </article>
-                <article class="service-card reveal">
-                    <div class="service-image" style="height:140px; background: linear-gradient(135deg, rgba(102,126,234,0.12), rgba(247,127,0,0.08)); border-radius:12px;"></div>
-                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                    <h3>App Development</h3>
-                    <p>Cross-platform mobile and web apps built for performance and scale.</p>
-                    <a href="services.html?service=app" class="service-link">Learn more about app development</a>
-                </article>
-                <article class="service-card reveal">
-                    <div class="service-image" style="height:140px; background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(236,72,153,0.08)); border-radius:12px;"></div>
-                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3>Social Media Management</h3>
-                    <p>Audience growth, content strategy, and campaign analytics for social channels.</p>
-                    <a href="services.html?service=social" class="service-link">Learn more about social media</a>
-                </article>
             </div>
         </div>
     </section>
 
     <!-- Blog Section -->
     <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">From the Blog</h2>
-            <p class="section-subtitle">Practical ideas for modern web products, Node.js APIs, and search visibility.</p>
-            <div class="blog-grid">
-                <article class="blog-card reveal">
-                    <h3>Why Node.js powers modern apps</h3>
-                    <p>Discover how Node.js helps teams build fast, scalable backends for today's digital products.</p>
-                    <a href="blog.html" class="service-link" target="_blank" rel="noopener noreferrer">Read the article</a>
-                </article>
-                <article class="blog-card reveal">
-                    <h3>SEO tips for modern portfolios</h3>
-                    <p>Learn how structure, speed, and content planning can improve your website's discoverability.</p>
-                    <a href="blog.html" class="service-link" target="_blank" rel="noopener noreferrer">Read the article</a>
-                </article>
-            </div>
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Latest Articles
+        </h2>
+
+        <p class="section-subtitle">
+            Insights on web design, SEO and digital growth.
+        </p>
+
+        <div class="blog-grid">
+
+            <article class="blog-card">
+
+                <div class="blog-image">
+                    <img src="images/website.jpg"
+                        alt="Website design">
+                </div>
+
+                <h3>
+                    Your Website Is Your Competitive Advantage
+                </h3>
+
+                <p>
+                    Learn how a professional website helps businesses
+                    attract customers and build trust.
+                </p>
+
+                <a href="blog.html#blog-post-1">
+                    Read Full Article
+                </a>
+
+            </article>
+
+
+            <article class="blog-card">
+
+                <div class="blog-image">
+                    <img src="images/seo.jpg"
+                        alt="SEO optimization">
+                </div>
+
+                <h3>
+                    Optimize for Search, Grow Your Business
+                </h3>
+
+                <p>
+                    Discover practical SEO techniques that improve
+                    your visibility online.
+                </p>
+
+                <a href="blog.html#blog-post-2">
+                    Read Full Article
+                </a>
+
+            </article>
+
         </div>
-    </section>
 
-    
+    </div>
 
+</section>
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2026 Darwin Developer. All rights reserved.</p>
+<footer class="footer">
+
+    <div class="container">
+        <h3 class="footer-title"> 
+            Let's Connect
+        </h3>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+
+            <a href="https://wa.me/254113364405"
+               target="_blank"
+               aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://github.com/Darwin-debug-jpg"
+               target="_blank"
+               aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/YOUR_darwin-ochieng-535015276/"
+               target="_blank"
+               aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:buildreadydigital@gmail.com"
+               aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+
         </div>
-    </footer>
+
+        <p>&copy; 2026 Build Ready Digital. All rights reserved.</p>
+
+    </div>
+
+</footer>
+
+    <!--Floating WhatsApp Button-->
+    <a href="https://wa.me/254113364405?text=Hello%20Build%20Ready%20Digital,%20I'm%20interested%20in%20your%20web%20development%20services."
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
 
     <script src="portfolio-script.js"></script>
 

@@ -1,8 +1,8 @@
 from PIL import Image, ImageFilter, ExifTags
 import os
 
-src = os.path.join('images', 'Profile image edit.jpg')
-dst = os.path.join('images', 'Profile image.jpg')
+src = os.path.join('images', 'Profile-image-edit2.jpg')
+dst = os.path.join('images', 'Profile-image-edit2.jpg')
 
 print('src exists:', os.path.exists(src))
 img = Image.open(src)

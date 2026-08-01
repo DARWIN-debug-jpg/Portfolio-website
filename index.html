@@ -4,12 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Build Ready Digital creates modern websites, TypeScript applications, and SEO-focused digital experiences.">
+    <meta name="keywords" content="web design, TypeScript, SEO, frontend development, portfolio">
     <title>BUILD READY DIGITAL</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="portfolio-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/x-icon" href="images/Build Ready logo.png">
+    <link rel="icon" type="image/x-icon" href="images/Build Ready logo 2.png">
 </head>
 <body>
+    <div id="progressBar" class="progress-bar"></div>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
@@ -20,83 +26,456 @@
                 <span class="brand-name">BUILD READY DIGITAL</span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="/index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="/portfolio.html" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="/portfolio.html" class="nav-link">Projects</a></li>
-                <li class="nav-item"><a href="/app.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <button class="hamburger" id="hamburger">
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
-            </button>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-content reveal-left">
-            <div class="hero-profile">
-                <img src="images/Profile image edit.jpg" alt="Profile photo of Darwin Developer" class="profile-pic">
-                <div class="profile-meta">
-                    <div class="profile-name">DARWIN ADHOLA</div>
-                    <div class="profile-tag">FOUNDER &amp; CEO — BUILD READY DIGITAL</div>
-                </div>
-            </div>
-            <h1 class="hero-title">Hello, I'm <span class="highlight">DARWIN, Developer</span></h1>
-            <p class="hero-subtitle">Full Stack Developer | Creative Problem Solver</p>
-            <p class="hero-description">I build beautiful, responsive websites and applications that feel premium and perform flawlessly.</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-        <div class="hero-animation reveal-right">
-            <div class="hero-visual-card">
-                <div class="orbital-ring"></div>
-                <img src="images/Design 1.jpg" alt="Design preview" class="hero-image">
-                <div class="hero-visual-badge">UI/UX • Web Design</div>
-            </div>
-        </div>
-    </section>
+    <!-- ================= HERO ================= -->
+<section id="home" class="hero">
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate developer with 5+ years of experience creating web applications that solve real-world problems. I specialize in front-end development and love turning ideas into beautiful, functional digital experiences.</p>
-                    <p>When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or helping others learn web development.</p>
-                    <div class="skills-section">
-                        <h3>Skills</h3>
-                        <div class="skills-grid">
-                            <span class="skill-tag">HTML5</span>
-                            <span class="skill-tag">CSS3</span>
-                            <span class="skill-tag">JavaScript</span>
-                            <span class="skill-tag">React</span>
-                            <span class="skill-tag">Node.js</span>
-                            <span class="skill-tag">Git</span>
-                            <span class="skill-tag">Responsive Design</span>
-                            <span class="skill-tag">UI/UX</span>
+    <!-- Background -->
+    <div class="hero-background">
+        <img src="images/Design 1.jpg" alt="">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Floating Shapes -->
+    <div class="blob blob1"></div>
+    <div class="blob blob2"></div>
+    <div class="blob blob3"></div>
+
+    <div class="hero-content reveal-left">
+
+        <div class="hero-profile">
+
+            <img src="images/Profile-image-edit2.jpg"
+                 alt="Darwin"
+                 class="profile-pic">
+
+            <div class="profile-meta">
+                <div class="profile-name">
+                    DARWIN ADHOLA
+                </div>
+
+                <div class="profile-tag">
+                    Founder • Build Ready Digital
+                </div>
+
+            </div>
+
+        </div>
+
+        <h1 class="hero-title">
+
+            Building
+            <span>Beautiful Websites</span>
+
+            that Grow Businesses.
+
+        </h1>
+
+        <p class="hero-description">
+
+            We design modern websites, web applications,
+            SEO strategies and digital experiences that
+            help businesses stand out online.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#projects" class="cta-button">
+                View Projects
+            </a>
+
+            <a href="#contact" class="secondary-button">
+                Let's Talk
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-animation reveal-right">
+
+        <div class="glass-card">
+
+            <img src="images/Design Image 3.jpg" alt="Website Design Example"
+                 class="hero-image">
+
+            <div class="hero-badge">
+
+                <i class="fas fa-code"></i>
+
+                Modern Web Development
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+    <!-- ================= ABOUT SECTION ================= -->
+<section id="about" class="about">
+
+    <div class="container">
+
+        <h2 class="section-title">About Build Ready Digital</h2>
+
+        <div class="about-content">
+
+            <!-- Left Side -->
+            <div class="about-text">
+
+                <h3>Building Digital Experiences That Drive Growth</h3>
+
+                <p>
+                    At <strong>Build Ready Digital</strong>, we create modern websites,
+                    web applications, and digital experiences that help businesses
+                    establish a powerful online presence. Every project is designed with
+                    performance, responsiveness, security and user experience in mind.
+                </p>
+
+                <p>
+                    We believe a website should do more than look beautiful—it should
+                    generate leads, build trust, and convert visitors into customers.
+                    Through creative design, clean code, and SEO best practices, we
+                    help businesses grow online with confidence.
+                </p>
+
+                <!-- Vision & Mission -->
+                <div class="vision-mission-section">
+
+                    <div class="vision-mission-card">
+                        <div class="card-icon">
+                            <i class="fas fa-eye"></i>
                         </div>
+
+                        <h3>Our Vision</h3>
+
+                        <p>
+                            To become a trusted digital partner that empowers businesses
+                            through innovative websites and digital solutions that
+                            inspire growth and long-term success.
+                        </p>
+
                     </div>
+
+                    <div class="vision-mission-card">
+
+                        <div class="card-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+
+                        <h3>Our Mission</h3>
+
+                        <p>
+                            To build fast, secure and user-focused digital products that
+                            combine modern design, exceptional performance and measurable
+                            business results.
+                        </p>
+
+                    </div>
+
                 </div>
-                <div class="about-stats">
-                    <div class="stat">
-                        <h3>50+</h3>
-                        <p>Projects Completed</p>
+
+                <!-- Why Choose Us -->
+                <section class="why-us">
+
+                    <h2 class="section-title">
+                        Why Choose Build Ready Digital
+                    </h2>
+
+                    <div class="why-grid">
+
+                        <div class="why-card">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Lightning Fast</h3>
+                            <p>
+                                Optimized websites that load quickly and improve user experience.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <i class="fas fa-search"></i>
+                            <h3>SEO Ready</h3>
+                            <p>
+                                Built with search engine optimization from day one.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <i class="fas fa-mobile-alt"></i>
+                            <h3>Responsive Design</h3>
+                            <p>
+                                Beautiful layouts across desktops, tablets and mobile devices.
+                            </p>
+                        </div>
+
+                        <div class="why-card">
+                            <i class="fas fa-lock"></i>
+                            <h3>Secure</h3>
+                            <p>
+                                Modern coding practices for security, reliability and performance.
+                            </p>
+                        </div>
+
                     </div>
-                    <div class="stat">
-                        <h3>30+</h3>
-                        <p>Happy Clients</p>
-                    </div>
-                    <div class="stat">
-                        <h3>5+</h3>
-                        <p>Years Experience</p>
-                    </div>
+
+                </section>
+
+            </div>
+
+            <!-- Right Side Statistics -->
+            <div class="about-stats">
+
+                <div class="stat">
+                    <h3 class="counter" data-target="50">0</h3>
+                    <p>Projects Completed</p>
+                </div>
+
+                <div class="stat">
+                    <h3 class="counter" data-target="30">0</h3>
+                    <p>Happy Clients</p>
+                </div>
+
+                <div class="stat">
+                    <h3 class="counter" data-target="2">0</h3>
+                    <p>Years Experience</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================= END ABOUT ================= -->
+    
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-solar" aria-labelledby="skills-title">
+        <div class="container">
+            <h2 id="skills-title" class="section-title">Skills</h2>
+            <p class="section-subtitle">A versatile skill set focused on creating fast, modern, and user-friendly solutions.</p>
+            <div class="solar-system" aria-label="Interactive skills solar system">
+                <div class="stars" aria-hidden="true"></div>
+                <div class="shooting-star star-1" aria-hidden="true"></div>
+                <div class="shooting-star star-2" aria-hidden="true"></div>
+                <div class="shooting-star star-3" aria-hidden="true"></div>
+                <div class="particles" aria-hidden="true">
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                    <span class="particle"></span>
+                </div>
+                <div class="solar-center" data-center-text="Full Stack Developer">
+                    <span class="center-label">Full Stack Developer</span>
+                </div>
+
+                <div class="orbit orbit-1" aria-hidden="true">
+                    <button class="planet" type="button" aria-label="HTML5 skill, Expert level, Semantic markup and accessible structure" aria-describedby="tooltip-html5">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-html5"></i></span>
+                            <span class="planet-label">HTML5</span>
+                            <span class="planet-tooltip" id="tooltip-html5">
+                                <strong>Expert</strong>
+                                <p>Semantic markup and accessible structure for modern web applications.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 120deg;" aria-label="CSS3 skill, Advanced level, Modern responsive styling and animations" aria-describedby="tooltip-css3">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-css3-alt"></i></span>
+                            <span class="planet-label">CSS3</span>
+                            <span class="planet-tooltip" id="tooltip-css3">
+                                <strong>Advanced</strong>
+                                <p>Responsive layouts, animations, and polished visual systems.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 240deg;" aria-label="JavaScript skill, Advanced level, Interactive client-side experiences" aria-describedby="tooltip-js">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-js"></i></span>
+                            <span class="planet-label">JavaScript</span>
+                            <span class="planet-tooltip" id="tooltip-js">
+                                <strong>Advanced</strong>
+                                <p>Dynamic interfaces, browser APIs, and performant frontend logic.</p>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="orbit orbit-2" aria-hidden="true">
+                    <button class="planet" type="button" aria-label="React skill, Advanced level, Component-driven UI architecture" aria-describedby="tooltip-react">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-react"></i></span>
+                            <span class="planet-label">React</span>
+                            <span class="planet-tooltip" id="tooltip-react">
+                                <strong>Advanced</strong>
+                                <p>Reusable component design and state-driven application flow.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 140deg;" aria-label="Node.js skill, Advanced level, Scalable backend solutions" aria-describedby="tooltip-node">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-node-js"></i></span>
+                            <span class="planet-label">Node.js</span>
+                            <span class="planet-tooltip" id="tooltip-node">
+                                <strong>Advanced</strong>
+                                <p>Server-side JavaScript, APIs, and full stack integration.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 260deg;" aria-label="GitHub skill, Advanced level, Collaborative version control and workflow" aria-describedby="tooltip-github">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-github"></i></span>
+                            <span class="planet-label">GitHub</span>
+                            <span class="planet-tooltip" id="tooltip-github">
+                                <strong>Advanced</strong>
+                                <p>Version control, collaboration, and polished repository management.</p>
+                            </span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="orbit orbit-3" aria-hidden="true">
+                    <button class="planet" type="button" aria-label="MongoDB skill, Intermediate level, NoSQL database design for flexible data" aria-describedby="tooltip-mongo">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fas fa-database"></i></span>
+                            <span class="planet-label">MongoDB</span>
+                            <span class="planet-tooltip" id="tooltip-mongo">
+                                <strong>Intermediate</strong>
+                                <p>NoSQL collections, schema design, and fast document queries.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 110deg;" aria-label="MySQL skill, Intermediate level, Structured relational database modeling" aria-describedby="tooltip-mysql">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fas fa-server"></i></span>
+                            <span class="planet-label">MySQL</span>
+                            <span class="planet-tooltip" id="tooltip-mysql">
+                                <strong>Intermediate</strong>
+                                <p>Relational queries, normalization, and production-ready database systems.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 220deg;" aria-label="Python skill, Intermediate level, Scripting and automation for backend workflows" aria-describedby="tooltip-python">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fab fa-python"></i></span>
+                            <span class="planet-label">Python</span>
+                            <span class="planet-tooltip" id="tooltip-python">
+                                <strong>Intermediate</strong>
+                                <p>Scripting, automation, and backend utilities for data-driven products.</p>
+                            </span>
+                        </span>
+                    </button>
+                    <button class="planet" type="button" style="--planet-angle: 330deg;" aria-label="Express skill, Intermediate level, Minimal backend routing and middleware" aria-describedby="tooltip-express">
+                        <span class="planet-inner">
+                            <span class="planet-icon"><i class="fas fa-stream"></i></span>
+                            <span class="planet-label">Express</span>
+                            <span class="planet-tooltip" id="tooltip-express">
+                                <strong>Intermediate</strong>
+                                <p>Fast API routing, middleware orchestration, and Node.js backend services.</p>
+                            </span>
+                        </span>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
-
+    <!-- Services Section -->
+    <section id="services" class="services" aria-labelledby="services-title">
+        <div class="container">
+            <h2 id="services-title" class="section-title">Services</h2>
+            <p class="section-subtitle">Premium digital services to grow your brand and product.</p>
+            <div class="services-grid">
+                <article class="service-card reveal">
+                    <div class="service-image"
+     style=
+        "height:250px;
+        background:
+            linear-gradient(rgba(37,99,235,0.2), rgba(244,63,94,0.2)),
+            url('images/Web\ design\ 2.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
+                    <h3>Web Design</h3>
+                    <p>Clean, modern interfaces tailored to your brand and audience.</p>
+                    <a href="services.html?service=design" class="service-link">Learn more about web design</a>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-image"
+     style=
+        "height:250px;
+        background:
+            linear-gradient(rgba(37,99,235,0.2), rgba(244,63,94,0.2)),
+            url('images/seo 2.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
+                    <h3>SEO Optimization</h3>
+                    <p>Search-friendly structures and content strategies to improve online visibility.</p>
+                    <a href="services.html?service=seo" class="service-link">Learn more about SEO</a>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-image"
+     style=
+        "height:250px;
+        background:
+            linear-gradient(rgba(37,99,235,0.2), rgba(244,63,94,0.2)),
+            url('images/App-development2.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>App Development</h3>
+                    <p>Cross-platform mobile and web apps built for performance and scale.</p>
+                    <a href="services.html?service=app" class="service-link">Learn more about app development</a>
+                </article>
+                <article class="service-card reveal">
+                    <div class="service-image"
+     style=
+        "height:250px;
+        background:
+            linear-gradient(rgba(37,99,235,0.2), rgba(244,63,94,0.2)),
+            url('images/social Media 3.jpg');
+        background-size: cover;
+        background-position: center;
+        border-radius:12px;"></div>
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Social Media Management</h3>
+                    <p>Audience growth, content strategy, and campaign analytics for social channels.</p>
+                    <a href="services.html?service=social" class="service-link">Learn more about social media management</a>
+                </article>
+            </div>
+        </div>
+    </section>
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
@@ -104,24 +483,24 @@
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card">
-                    <div class="project-image" style="background: url('images/E Commerce.jpg') center/cover no-repeat;"></div>
+                    <div class="project-image" style="background: url('images/E-Commerce-1.jpg') center/cover no-repeat;"></div>
                     <div class="project-content">
-                        <h3>E-Commerce Platform</h3>
-                        <p>A full-stack e-commerce solution with product catalog, shopping cart, and payment integration.</p>
+                        <h3>Commerce Platform</h3>
+                        <p>A full-stack e-commerce solution with a Node.js backend, product catalog, shopping cart, and payments.</p>
                         <div class="project-tags">
                             <span class="tag">React</span>
                             <span class="tag">Node.js</span>
                             <span class="tag">MongoDB</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
+                            <a href="http://nyatidigital.com/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 2 -->
                 <div class="project-card">
-                    <div class="project-image" style="background: url('images/Task Management app.jpg') center/cover no-repeat;"></div>
+                    <div class="project-image" style="background: url('images/Task-management-app.jpg') center/cover no-repeat;"></div>
                     <div class="project-content">
                         <h3>Task Management App</h3>
                         <p>A productivity tool that helps teams organize and manage their daily tasks efficiently.</p>
@@ -131,19 +510,19 @@
                             <span class="tag">Tailwind</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
+                            <a href="http://nyatidigital.com/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- Project 3 -->
                 <div class="project-card">
-                    <div class="project-image" style="background: url('images/Dashboard.jpg') center/cover no-repeat;"></div>
+                    <div class="project-image" style="background: url('images/Dashboard\ -Image-2.jpg') center/cover no-repeat;"></div>
                     <div class="project-content">
-                        <h3>Weather Dashboard</h3>
-                        <p>Real-time weather application with location-based forecasts and beautiful visualizations.</p>
+                        <h3>TypeScript Dashboard</h3>
+                        <p>Real-time analytics dashboard built with TypeScript and modern UI patterns.</p>
                         <div class="project-tags">
-                            <span class="tag">JavaScript</span>
+                            <span class="tag">TypeScript</span>
                             <span class="tag">API Integration</span>
                             <span class="tag">CSS Animations</span>
                         </div>
@@ -155,7 +534,7 @@
 
                 <!-- Project 4 -->
                 <div class="project-card">
-                    <div class="project-image" style="background: url('images/Social Media.jpg') center/cover no-repeat;"></div>
+                    <div class="project-image" style="background: url('images/Social-media-1.jpg') center/cover no-repeat;"></div>
                     <div class="project-content">
                         <h3>Social Media Analytics</h3>
                         <p>Dashboard that aggregates and visualizes data from multiple social media platforms.</p>
@@ -165,7 +544,7 @@
                             <span class="tag">REST API</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Project</a>
+                            <a href="http://nyatidigital.com/" target="_blank" rel="noopener noreferrer" class="project-link">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -173,12 +552,161 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
         <div class="container">
-            <p>&copy; 2026 Darwin Developer. All rights reserved.</p>
+            <h2 class="section-title">From the Blog</h2>
+            <p class="section-subtitle">Practical ideas for modern web products and search visibility.</p>
+            <div class="blog-grid">
+                <article class="blog-card ">
+                    <img src="images/Design Image 3.jpg" alt="Blog post about website design" class="blog-image">
+                    <h3>Your Website Is Your Competitive Advantage</h3>
+                     <a href="blog.html#blog-post-1" class="service-link">Read more</a>
+                </article>
+                <article class="blog-card ">
+                    <img src="images/Design Image 4.jpg" alt="Blog post about search optimization" class="blog-image">
+                    <h3>Optimize for Search, Grow Your Business</h3>
+                    <a href="blog.html#blog-post-2" class="service-link">Read more</a>
+                </article>
+            </div>
         </div>
-    </footer>
+    </section>
+   <!-- Contact Section -->
+<section id="contact" class="contact">
+    <div class="container">
+
+        <h2 class="section-title">Contact Me</h2>
+        <p class="section-subtitle">
+            Let's discuss your next website, application or digital project.
+        </p>
+
+        <div class="contact-wrapper">
+
+            <!-- Contact Information -->
+            <div class="contact-card reveal">
+
+                <h3>Get In Touch</h3>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+
+                    <div>
+                        <h4>Location</h4>
+                        <p>Nairobi,KENYA</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+
+                    <div>
+                        <h4>Email</h4>
+                        <p>buildreadydigital@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+254113364405</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-card reveal">
+
+                <form id="contactForm">
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Full Name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="text" placeholder="Subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea rows="6" placeholder="Your Message..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    
+    <!-- Footer -->
+<footer class="footer">
+
+    <div class="container">
+        <h3 class="footer-title"> 
+            Let's Connect
+        </h3>
+
+        <!-- Social Media Links -->
+        <div class="footer-social">
+
+            <a href="https://wa.me/254113364405"
+               target="_blank"
+               aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <a href="https://github.com/Darwin-debug-jpg"
+               target="_blank"
+               aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/YOUR_darwin-ochieng-535015276/"
+               target="_blank"
+               aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+
+            <a href="mailto:buildreadydigital@gmail.com"
+               aria-label="Email">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+        </div>
+
+        <p>&copy; 2026 Build Ready Digital. All rights reserved.</p>
+
+    </div>
+
+</footer>
+
+    <!--Floating WhatsApp Button-->
+    <a href="https://wa.me/254113364405?text=Hello%20Build%20Ready%20Digital,%20I'm%20interested%20in%20your%20web%20development%20services."
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="Chat with us on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
 
     <script src="portfolio-script.js"></script>
 
