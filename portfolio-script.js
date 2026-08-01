@@ -204,6 +204,92 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     /*=========================================
+      SERVICE DETAIL PANEL
+    =========================================*/
+
+    const serviceLinks = document.querySelectorAll(".service-link[data-service]");
+    const detailTitle = document.getElementById("serviceDetailTitle");
+    const detailText = document.getElementById("serviceDetailText");
+    const detailList = document.getElementById("serviceDetailList");
+    const detailCta = document.getElementById("serviceDetailCta");
+    const detailImage = document.getElementById("serviceDetailImage");
+
+    const serviceContent = {
+        design: {
+            title: "Web Design",
+            text: "Crafting elegant digital experiences that feel premium, clear, and conversion-ready.",
+            items: [
+                "Visual systems tailored to your brand",
+                "Fast, responsive layouts for every screen",
+                "Clear calls to action and strong storytelling"
+            ],
+            cta: "services.html?service=design",
+            image: "images/Web design 2.jpg"
+        },
+        seo: {
+            title: "SEO Optimization",
+            text: "Search-focused structure and content strategy to boost visibility and ranking potential.",
+            items: [
+                "Technical SEO improvements and healthy site structure",
+                "Keyword research and content direction",
+                "Analytics tracking for measurable growth"
+            ],
+            cta: "services.html?service=seo",
+            image: "images/Seo 2.jpg"
+        },
+        app: {
+            title: "App Development",
+            text: "Cross-platform applications built for speed, reliability, and thoughtful user journeys.",
+            items: [
+                "Scalable frontend and backend architecture",
+                "Modern frameworks for fast product delivery",
+                "Ongoing maintenance and feature expansion"
+            ],
+            cta: "services.html?service=app",
+            image: "images/App-development2.jpg"
+        },
+        social: {
+            title: "Social Media Management",
+            text: "Audience growth and content strategy designed to turn attention into meaningful engagement.",
+            items: [
+                "Consistent content planning and publishing",
+                "Campaign analytics and audience insights",
+                "Community engagement that strengthens trust"
+            ],
+            cta: "services.html?service=social",
+            image: "images/Social Media 3.jpg"
+        }
+    };
+
+    if (serviceLinks.length && detailTitle && detailText && detailList && detailCta && detailImage) {
+        const renderServiceDetail = (service) => {
+            const content = serviceContent[service] || serviceContent.design;
+            detailTitle.textContent = content.title;
+            detailText.textContent = content.text;
+            detailList.innerHTML = content.items.map(item => `<li>${item}</li>`).join("");
+            detailCta.href = content.cta;
+            detailCta.textContent = `View ${content.title.toLowerCase()} details`;
+            detailImage.src = content.image;
+            detailImage.alt = `${content.title} service`;
+        };
+
+        serviceLinks.forEach(link => {
+            link.addEventListener("click", (event) => {
+                event.preventDefault();
+                const service = link.dataset.service;
+                renderServiceDetail(service);
+                window.location.href = `services.html?service=${service}`;
+            });
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const initialService = params.get("service");
+        if (initialService) {
+            renderServiceDetail(initialService);
+        }
+    }
+
+    /*=========================================
       CONTACT FORM
     =========================================*/
 
@@ -256,40 +342,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const progress = (scrollTop / height) * 100;
 
             progressBar.style.width = progress + "%";
-
-        });
-
-    }
-
-    /*=========================================
-      THEME TOGGLE
-    =========================================*/
-
-    const themeToggle = document.getElementById("themeToggle");
-
-    if (themeToggle) {
-
-        themeToggle.addEventListener("click", () => {
-
-            document.body.classList.toggle("light-mode");
-
-            const icon = themeToggle.querySelector("i");
-
-            if (icon) {
-
-                if (document.body.classList.contains("light-mode")) {
-
-                    icon.classList.remove("fa-moon");
-                    icon.classList.add("fa-sun");
-
-                } else {
-
-                    icon.classList.remove("fa-sun");
-                    icon.classList.add("fa-moon");
-
-                }
-
-            }
 
         });
 

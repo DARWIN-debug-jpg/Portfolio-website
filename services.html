@@ -5,21 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services | BUILD READY DIGITAL</title>
     <link rel="stylesheet" href="portfolio-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/x-icon" href="images/Build Ready logo 2.png">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <img src="images/Build Ready logo 2.png" alt="BuildReadyDigital Logo" style="height: 70px; width: auto; margin-right: 0.2rem;">
-                <span style="font-size: 1.8rem; font-weight: bold; background: linear-gradient(135deg, var(--primary), var(--secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: flex; align-items: center;">BUILD READY DIGITAL</span>
+                <div class="brand-mark">
+                    <img src="images/Build Ready logo 2.png" alt="BuildReadyDigital Logo">
+                </div>
+                <span class="brand-name">BUILD READY DIGITAL</span>
             </div>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link" target="_blank" rel="noopener noreferrer">Home</a></li>
-                <li class="nav-item"><a href="portfolio.html#about" class="nav-link" target="_blank" rel="noopener noreferrer">About</a></li>
-                <li class="nav-item"><a href="services.html" class="nav-link" target="_blank" rel="noopener noreferrer">Services</a></li>
-                <li class="nav-item"><a href="blog.html" class="nav-link" target="_blank" rel="noopener noreferrer">Blog</a></li>
-                <li class="nav-item"><a href="app.html" class="nav-link" target="_blank" rel="noopener noreferrer">Contact</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="app.html" class="nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -35,22 +38,71 @@
         <div class="container">
             <div class="services-grid">
                 <article class="service-card reveal">
-                    <img src="images/Design image 2.jpg" alt="Website design service" class="service-image">
+                    <img src="images/Web design 2.jpg" alt="Website design service" class="service-image" loading="lazy" decoding="async">
+                    <div class="service-icon"><i class="fas fa-palette"></i></div>
                     <h3>Web Design</h3>
                     <p>Elegant interfaces that make your business feel modern, credible, and easy to trust.</p>
+                    <a href="services.html?service=design" class="service-link" data-service="design">View details</a>
                 </article>
                 <article class="service-card reveal">
-                    <img src="images/Design Image 3.jpg" alt="TypeScript and frontend development service" class="service-image">
-                    <h3>TypeScript Development</h3>
-                    <p>Reliable, scalable applications with strong architecture and maintainable code.</p>
-                </article>
-                <article class="service-card reveal">
-                    <img src="images/Design 1.jpg" alt="SEO service" class="service-image">
+                    <img src="images/Seo 2.jpg" alt="SEO service" class="service-image" loading="lazy" decoding="async">
+                    <div class="service-icon"><i class="fas fa-rocket"></i></div>
                     <h3>SEO Optimization</h3>
                     <p>Search-focused structure and content strategy to boost visibility and ranking potential.</p>
+                    <a href="services.html?service=seo" class="service-link" data-service="seo">View details</a>
                 </article>
+                <article class="service-card reveal">
+                    <img src="images/App-development2.jpg" alt="App development service" class="service-image" loading="lazy" decoding="async">
+                    <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                    <h3>App Development</h3>
+                    <p>Reliable, scalable applications with strong architecture and maintainable code.</p>
+                    <a href="services.html?service=app" class="service-link" data-service="app">View details</a>
+                </article>
+                <article class="service-card reveal">
+                    <img src="images/Social Media 3.jpg" alt="Social media management service" class="service-image" loading="lazy" decoding="async">
+                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
+                    <h3>Social Media Management</h3>
+                    <p>Audience growth, content strategy, and campaign analytics for social channels.</p>
+                    <a href="services.html?service=social" class="service-link" data-service="social">View details</a>
+                </article>
+            </div>
+            <div class="service-detail-panel reveal" id="serviceDetailPanel">
+                <div class="service-detail-copy">
+                    <p class="detail-pill">Selected service</p>
+                    <h3 id="serviceDetailTitle">Web Design</h3>
+                    <p id="serviceDetailText">Crafting elegant digital experiences that feel premium, clear, and conversion-ready.</p>
+                    <ul id="serviceDetailList">
+                        <li>Visual systems tailored to your brand</li>
+                        <li>Fast, responsive layouts for every screen</li>
+                        <li>Clear calls to action and strong storytelling</li>
+                    </ul>
+                    <a id="serviceDetailCta" href="services.html?service=design" class="service-link">View full service details</a>
+                </div>
+                <div class="service-detail-media">
+                    <img id="serviceDetailImage" src="images/Web design 2.jpg" alt="Web design service" loading="lazy" decoding="async">
+                </div>
             </div>
         </div>
     </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://github.com/Darwin-debug-jpg" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/YOUR_darwin-ochieng-535015276/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:buildreadydigital@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+            <div class="footer-quicklinks">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="services.html">Services</a>
+                <a href="blog.html">Blog</a>
+                <a href="app.html">Contact</a>
+            </div>
+            <p>&copy; 2026 Build Ready Digital. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="portfolio-script.js"></script>
 </body>
 </html>
