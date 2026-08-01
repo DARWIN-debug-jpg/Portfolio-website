@@ -290,6 +290,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     /*=========================================
+      LIVE CLOCK
+    =========================================*/
+
+    const liveClock = document.getElementById("liveClock");
+
+    const updateClock = () => {
+        if (!liveClock) return;
+        const now = new Date();
+        const time = now.toLocaleTimeString([], {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit"
+        });
+        const date = now.toLocaleDateString([], {
+            weekday: "short",
+            month: "short",
+            day: "numeric"
+        });
+        liveClock.textContent = `${date} • ${time}`;
+    };
+
+    updateClock();
+    setInterval(updateClock, 1000);
+
+    /*=========================================
       CONTACT FORM
     =========================================*/
 
