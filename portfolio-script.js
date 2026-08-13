@@ -223,8 +223,30 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Fast, responsive layouts for every screen",
                 "Clear calls to action and strong storytelling"
             ],
-            cta: "services.html?service=design",
-            image: "images/Web design 2.jpg"
+            cta: "web-design.html",
+            image: "images/Web-Development-Image.jpg"
+        },
+        brand: {
+            title: "Brand Visualization",
+            text: "Distinct identity systems that make your business memorable, premium, and instantly recognizable.",
+            items: [
+                "Consistent visual storytelling across touchpoints",
+                "Logo, color, and typography frameworks",
+                "Marketing-ready assets for stronger positioning"
+            ],
+            cta: "services.html",
+            image: "images/Graphic-Design Image.jpg"
+        },
+        ux: {
+            title: "UI/UX Design",
+            text: "Thoughtful, user-centered interfaces designed to make every interaction feel intuitive and confident.",
+            items: [
+                "Smooth user journeys and clear information hierarchy",
+                "Responsive wireframes and polished interface design",
+                "User-first decisions that support conversion goals"
+            ],
+            cta: "services.html",
+            image: "images/UI-UX image.jpg"
         },
         seo: {
             title: "SEO Optimization",
@@ -234,8 +256,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Keyword research and content direction",
                 "Analytics tracking for measurable growth"
             ],
-            cta: "services.html?service=seo",
-            image: "images/Seo 2.jpg"
+            cta: "seo-optimization.html",
+            image: "images/SEO-Image.jpg"
         },
         app: {
             title: "App Development",
@@ -245,7 +267,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Modern frameworks for fast product delivery",
                 "Ongoing maintenance and feature expansion"
             ],
-            cta: "services.html?service=app",
+            cta: "app-development.html",
             image: "images/App-development2.jpg"
         },
         social: {
@@ -256,9 +278,18 @@ document.addEventListener("DOMContentLoaded", () => {
                 "Campaign analytics and audience insights",
                 "Community engagement that strengthens trust"
             ],
-            cta: "services.html?service=social",
-            image: "images/Social Media 3.jpg"
+            cta: "social-media-management.html",
+            image: "images/Social-Media-Image.jpg"
         }
+    };
+
+    const serviceRedirects = {
+        design: "web-design.html",
+        brand: "services.html",
+        ux: "services.html",
+        seo: "seo-optimization.html",
+        app: "app-development.html",
+        social: "social-media-management.html"
     };
 
     if (serviceLinks.length && detailTitle && detailText && detailList && detailCta && detailImage) {
@@ -278,7 +309,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 event.preventDefault();
                 const service = link.dataset.service;
                 renderServiceDetail(service);
-                window.location.href = `services.html?service=${service}`;
+                const targetPage = serviceRedirects[service] || "services.html";
+                window.location.href = targetPage;
             });
         });
 
