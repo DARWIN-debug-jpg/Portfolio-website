@@ -402,7 +402,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-    }
+    }document.addEventListener("DOMContentLoaded", () => {
+
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector(".nav-menu");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    if (!hamburger || !navMenu) return;
+
+    // Open / close mobile menu
+    hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+
+        const isOpen = navMenu.classList.contains("active");
+
+        hamburger.setAttribute("aria-expanded", isOpen);
+    });
+
+    // Close menu when a navigation link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+        });
+    });
+
+    // Close menu when clicking outside navigation
+    document.addEventListener("click", (event) => {
+
+        const clickedInsideNav =
+            navMenu.contains(event.target) ||
+            hamburger.contains(event.target);
+
+        if (!clickedInsideNav) {
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+            hamburger.setAttribute("aria-expanded", "false");
+        }
+    });
+
+});
 
     /*=========================================
       PLANET HOVER
