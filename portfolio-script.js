@@ -1,34 +1,93 @@
 /*==================================================
 BUILD READY DIGITAL
 Main JavaScript
-==================================================*/
-
-document.addEventListener("DOMContentLoaded", () => {
+==============================================
 
     /*=========================================
-      MOBILE NAVIGATION
-    =========================================*/
+  MOBILE NAVIGATION
+=========================================*/
 
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.querySelector(".nav-menu");
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("main-navigation");
+const navLinks = document.querySelectorAll(".nav-link");
 
-    if (hamburger && navMenu) {
+if (hamburger && navMenu) {
 
-        hamburger.addEventListener("click", () => {
-            hamburger.classList.toggle("active");
-            navMenu.classList.toggle("active");
+    // Open / close mobile menu
+    hamburger.addEventListener("click", () => {
+
+        hamburger.classList.toggle("active");
+        navMenu.classList.toggle("active");
+
+        const isOpen = navMenu.classList.contains("active");
+
+        hamburger.setAttribute(
+            "aria-expanded",
+            isOpen ? "true" : "false"
+        );
+
+        hamburger.setAttribute(
+            "aria-label",
+            isOpen
+                ? "Close navigation menu"
+                : "Open navigation menu"
+        );
+
+    });
+
+
+    // Close menu when a link is clicked
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            hamburger.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
         });
 
-        document.querySelectorAll(".nav-link").forEach(link => {
+    });
 
-            link.addEventListener("click", () => {
-                hamburger.classList.remove("active");
-                navMenu.classList.remove("active");
-            });
 
-        });
+    // Close menu when clicking outside
+    document.addEventListener("click", (event) => {
 
-    }
+        const clickedInsideMenu =
+            navMenu.contains(event.target);
+
+        const clickedHamburger =
+            hamburger.contains(event.target);
+
+        if (!clickedInsideMenu && !clickedHamburger) {
+
+            hamburger.classList.remove("active");
+            navMenu.classList.remove("active");
+
+            hamburger.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+            hamburger.setAttribute(
+                "aria-label",
+                "Open navigation menu"
+            );
+
+        }
+
+    });
+
+}
 
     /*=========================================
       STICKY NAVBAR
@@ -145,9 +204,8 @@ document.addEventListener("DOMContentLoaded", () => {
     =========================================*/
 
     const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    window.addEventListener("scroll", () => {
+    
+window.addEventListener("scroll", () => {
 
         let current = "";
 
@@ -402,32 +460,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         });
 
-    }document.addEventListener("DOMContentLoaded", () => {
-
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.querySelector(".nav-menu");
-    const navLinks = document.querySelectorAll(".nav-link");
-
-    if (!hamburger || !navMenu) return;
-
-    // Open / close mobile menu
-    hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-
-        const isOpen = navMenu.classList.contains("active");
-
-        hamburger.setAttribute("aria-expanded", isOpen);
-    });
-
-    // Close menu when a navigation link is clicked
-    navLinks.forEach(link => {
-        link.addEventListener("click", () => {
-            hamburger.classList.remove("active");
-            navMenu.classList.remove("active");
-            hamburger.setAttribute("aria-expanded", "false");
-        });
-    });
+    }
+        
 
     // Close menu when clicking outside navigation
     document.addEventListener("click", (event) => {
@@ -442,8 +476,26 @@ document.addEventListener("DOMContentLoaded", () => {
             hamburger.setAttribute("aria-expanded", "false");
         }
     });
+    if (progressBar) {
 
-});
+    window.addEventListener("scroll", () => {
+
+        const scrollTop = document.documentElement.scrollTop;
+
+        const height =
+            document.documentElement.scrollHeight -
+            document.documentElement.clientHeight;
+
+        const progress = (scrollTop / height) * 100;
+
+        progressBar.style.width = progress + "%";
+
+    });
+
+}
+
+
+
 
     /*=========================================
       PLANET HOVER
@@ -467,4 +519,3 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-});
