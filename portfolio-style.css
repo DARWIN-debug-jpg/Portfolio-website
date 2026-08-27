@@ -677,7 +677,7 @@ section::before {
 .hero-buttons {
     display: flex;
 
-    gap: 18px;
+    gap: 15px;
 
     flex-wrap: wrap;
 }
@@ -752,9 +752,9 @@ section::before {
 .glass-card {
     position: relative;
 
-    padding: 22px;
+    padding: 10px;
 
-    border-radius: 30px;
+    border-radius: 20px;
 
     background:
         rgba(255, 255, 255, 0.08);
@@ -771,9 +771,9 @@ section::before {
     width: 100%;
     height: 560px;
 
-    object-fit: cover;
+    object-fit: contain;
 
-    border-radius: 22px;
+    border-radius: 15px;
 }
 
 .hero-badge {
