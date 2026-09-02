@@ -1776,6 +1776,8 @@ section::before {
     padding-bottom: 15px;
 
     scroll-snap-type: x mandatory;
+
+    scrollbar-width: thin;
 }
 
 .testimonials-slider .testimonial-card {
@@ -2093,13 +2095,13 @@ section::before {
 .footer-social {
     display: flex;
 
+    flex-direction: column;
+
     align-items: center;
 
     justify-content: center;
 
     gap: 1rem;
-
-    flex-wrap: wrap;
 
     margin-bottom: 2rem;
 }
@@ -2135,11 +2137,13 @@ section::before {
 .footer-quicklinks {
     display: flex;
 
+    flex-direction: column;
+
+    align-items: center;
+
     justify-content: center;
 
     gap: 16px;
-
-    flex-wrap: wrap;
 
     margin: 16px 0 20px;
 }
@@ -2965,18 +2969,15 @@ section::before {
        ===================================================== */
 
     .testimonials-slider {
-        flex-direction: column;
+        flex-direction: row;
 
-        overflow-x: visible;
+        overflow-x: auto;
     }
 
     .testimonials-slider .testimonial-card {
-        flex:
-            0 0 auto;
+        flex: 0 0 min(320px, 86vw);
 
-        width: 100%;
-
-        max-width: 100%;
+        max-width: min(320px, 86vw);
     }
 
     .testimonial-card {
@@ -3044,8 +3045,7 @@ section::before {
     }
 
     .footer-quicklinks {
-        gap:
-            10px 18px;
+        gap: 10px;
     }
 }
 
