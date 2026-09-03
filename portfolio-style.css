@@ -1328,6 +1328,14 @@ section::before {
         0 15px 35px rgba(37, 99, 235, 0.4);
 }
 
+.service-card.icon-only {
+    padding-top: 25px;
+}
+
+.service-card.icon-only .service-icon {
+    margin: 0 auto 20px;
+}
+
 .service-card h3 {
     margin: 16px 0 10px;
 
@@ -1467,6 +1475,7 @@ section::before {
 .service-detail-media img {
     width: 100%;
 
+    aspect-ratio: 4 / 3;
     min-height: 240px;
 
     object-fit: cover;
