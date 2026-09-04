@@ -2104,7 +2104,8 @@ section::before {
 .footer-social {
     display: flex;
 
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     align-items: center;
 
@@ -2132,6 +2133,9 @@ section::before {
 
     font-size: 1.25rem;
 
+    text-decoration: underline;
+    text-underline-offset: 6px;
+
     transition:
         background 0.35s ease,
         transform 0.35s ease;
@@ -2146,7 +2150,8 @@ section::before {
 .footer-quicklinks {
     display: flex;
 
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     align-items: center;
 
@@ -2159,6 +2164,9 @@ section::before {
 
 .footer-quicklinks a {
     color: #cbd5e1;
+
+    text-decoration: underline;
+    text-underline-offset: 4px;
 
     transition:
         color 0.3s ease;
