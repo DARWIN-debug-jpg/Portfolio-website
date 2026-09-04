@@ -155,6 +155,57 @@
     color: #64748b;
 }
 
+[data-theme="light"] .skill-card,
+[data-theme="light"] .service-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .blog-card,
+[data-theme="light"] .testimonial-card {
+    color: #334155;
+}
+
+[data-theme="light"] .skill-card h3,
+[data-theme="light"] .service-card h3,
+[data-theme="light"] .project-content h3,
+[data-theme="light"] .blog-card h3,
+[data-theme="light"] .testimonial-name,
+[data-theme="light"] .service-detail-copy h3,
+[data-theme="light"] .about-text h3,
+[data-theme="light"] .vision-mission-card h3,
+[data-theme="light"] .why-card h3 {
+    color: #0f172a;
+}
+
+[data-theme="light"] .skill-card p,
+[data-theme="light"] .service-card p,
+[data-theme="light"] .project-content p,
+[data-theme="light"] .blog-card p,
+[data-theme="light"] .testimonial-quote,
+[data-theme="light"] .testimonial-role,
+[data-theme="light"] .about-text p,
+[data-theme="light"] .vision-mission-card p,
+[data-theme="light"] .why-card p,
+[data-theme="light"] .service-detail-copy p,
+[data-theme="light"] .service-detail-copy li {
+    color: #475569;
+}
+
+[data-theme="light"] .service-link,
+[data-theme="light"] .blog-card a,
+[data-theme="light"] .project-link {
+    color: #1d4ed8;
+}
+
+[data-theme="light"] .service-link:hover,
+[data-theme="light"] .blog-card a:hover,
+[data-theme="light"] .project-link:hover {
+    color: #1e3a8a;
+}
+
+[data-theme="light"] .section-subtitle,
+[data-theme="light"] .stat p {
+    color: #475569;
+}
+
 
 /* =========================================================
    RESET
