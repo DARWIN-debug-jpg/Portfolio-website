@@ -1833,13 +1833,19 @@ section::before {
     display: grid;
 
     grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+        repeat(2, minmax(0, 1fr));
 
     gap: 24px;
+
+    width: min(100%, 900px);
+    min-height: 430px;
+    margin: 0 auto;
 }
 
 .blog-card {
     position: relative;
+
+    min-height: 430px;
 
     background:
         linear-gradient(
@@ -1872,7 +1878,7 @@ section::before {
 
 .blog-image {
     width: 100%;
-    height: 200px;
+    height: 220px;
 
     overflow: hidden;
 }
