@@ -292,7 +292,7 @@ window.addEventListener("scroll", () => {
                 "Logo, color, and typography frameworks",
                 "Marketing-ready assets for stronger positioning"
             ],
-            cta: "services.html",
+            cta: "brand-visualization.html",
             image: "images/Graphic-Design Image.jpg"
         },
         ux: {
@@ -303,7 +303,7 @@ window.addEventListener("scroll", () => {
                 "Responsive wireframes and polished interface design",
                 "User-first decisions that support conversion goals"
             ],
-            cta: "services.html",
+            cta: "ui-ux-design.html",
             image: "images/UI-UX image.jpg"
         },
         seo: {
@@ -343,8 +343,8 @@ window.addEventListener("scroll", () => {
 
     const serviceRedirects = {
         design: "web-design.html",
-        brand: "services.html",
-        ux: "services.html",
+        brand: "brand-visualization.html",
+        ux: "ui-ux-design.html",
         seo: "seo-optimization.html",
         app: "app-development.html",
         social: "social-media-management.html"
@@ -393,16 +393,51 @@ window.addEventListener("scroll", () => {
             minute: "2-digit",
             second: "2-digit"
         });
-        const date = now.toLocaleDateString([], {
-            weekday: "short",
-            month: "short",
-            day: "numeric"
-        });
-        liveClock.textContent = `${date} • ${time}`;
+        liveClock.textContent = time;
     };
 
     updateClock();
     setInterval(updateClock, 1000);
+
+    /*=========================================
+      THEME TOGGLE AND HOME ARROW
+    =========================================*/
+
+    const navActions = document.querySelector(".nav-actions");
+    const savedTheme = localStorage.getItem("theme") || "dark";
+    document.documentElement.dataset.theme = savedTheme;
+
+    if (navActions && !document.querySelector(".theme-toggle")) {
+        const themeToggle = document.createElement("button");
+        themeToggle.className = "theme-toggle";
+        themeToggle.type = "button";
+        themeToggle.setAttribute("aria-label", "Switch to light mode");
+        navActions.appendChild(themeToggle);
+
+        const updateThemeButton = () => {
+            const isLight = document.documentElement.dataset.theme === "light";
+            themeToggle.innerHTML = `<i class="fas fa-${isLight ? "moon" : "sun"}"></i>`;
+            themeToggle.setAttribute("aria-label", `Switch to ${isLight ? "dark" : "light"} mode`);
+        };
+
+        updateThemeButton();
+        themeToggle.addEventListener("click", () => {
+            const nextTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+            document.documentElement.dataset.theme = nextTheme;
+            localStorage.setItem("theme", nextTheme);
+            updateThemeButton();
+        });
+    }
+
+    const footer = document.querySelector(".footer");
+    if (footer && !document.querySelector(".home-arrow")) {
+        const homeArrow = document.createElement("a");
+        homeArrow.className = "home-arrow";
+        homeArrow.href = window.location.pathname.endsWith("index.html") || window.location.pathname === "/" ? "#home" : "index.html";
+        homeArrow.setAttribute("aria-label", "Return to home page");
+        homeArrow.innerHTML = '<i class="fas fa-arrow-up"></i>';
+        footer.parentNode.insertBefore(homeArrow, footer);
+    }
 
     /*=========================================
       CONTACT FORM
@@ -518,4 +553,3 @@ window.addEventListener("scroll", () => {
         });
 
     });
-
