@@ -921,24 +921,6 @@ section::before {
     z-index: 2;
 }
 
-.glass-card {
-    position: relative;
-
-    padding: 10px;
-
-    border-radius: 20px;
-
-    background:
-        rgba(255, 255, 255, 0.08);
-
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-
-    border: 1px solid rgba(255, 255, 255, 0.15);
-
-    box-shadow: var(--shadow);
-}
-
 .hero-image {
     width: 100%;
     height: 560px;
@@ -1740,45 +1722,6 @@ section::before {
     color: #d4d8df;
 
     line-height: 1.8;
-}
-
-.project-tags {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 12px;
-
-    margin-bottom: 28px;
-}
-
-.tag {
-    padding: 8px 18px;
-
-    border-radius: 30px;
-
-    background:
-        rgba(37, 99, 235, 0.15);
-
-    border:
-        1px solid rgba(37, 99, 235, 0.2);
-
-    color: #8cb8ff;
-
-    font-size: 0.85rem;
-
-    font-weight: 600;
-}
-
-.tag:hover {
-    background:
-        linear-gradient(
-            90deg,
-            var(--primary),
-            var(--secondary)
-        );
-
-    color: #fff;
 }
 
 .project-links {
@@ -2766,6 +2709,12 @@ section::before {
         pointer-events: auto;
     }
 
+    .blog-navbar .nav-menu,
+    .blog-navbar .nav-menu.active,
+    .blog-navbar .hamburger {
+        display: none !important;
+    }
+
     .nav-item {
         width: 100%;
     }
@@ -2898,14 +2847,6 @@ section::before {
         width: 100%;
 
         margin: 0 auto;
-    }
-
-    .glass-card {
-        width: 100%;
-
-        padding: 12px;
-
-        border-radius: 20px;
     }
 
     .hero-image {
@@ -3451,6 +3392,11 @@ section::before {
 
     .navbar {
         height: 70px;
+    }
+
+    .blog-navbar .nav-menu,
+    .blog-navbar .hamburger {
+        display: none;
         z-index: 99999;
     }
 
@@ -3570,3 +3516,11 @@ section::before {
 /* =========================================================
    END OF STYLESHEET
    ========================================================= */
+
+@media (max-width: 768px) {
+    .blog-navbar .nav-menu,
+    .blog-navbar .nav-menu.active,
+    .blog-navbar .hamburger {
+        display: none !important;
+    }
+}
