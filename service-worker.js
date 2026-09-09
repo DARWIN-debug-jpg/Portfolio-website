@@ -1,4 +1,4 @@
-const CACHE_NAME = "build-ready-digital-v1";
+const CACHE_NAME = "build-ready-digital-v2";
 const PRECACHE_URLS = [
     "portfolio-style.css",
     "portfolio-script.js",
