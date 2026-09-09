@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="images/Hero-Renew-Image.jpg" fetchpriority="high">
     <link rel="stylesheet" href="portfolio-style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" type="image/png" href="images/favicon.png">
@@ -35,7 +36,6 @@
             </ul>
             <!--Mobile Navigation controls-->
             <div class="nav-actions">
-                <span class="nav-clock" id="liveClock" aria-live="polite"></span>
                 <button class="hamburger" id="hamburger" type="button" aria-label="toggle navigation menu" aria-expanded="false" aria-controls="main-navigation">
                 <span></span>
                 <span></span>
@@ -50,7 +50,7 @@
 
     <!-- Background -->
     <div class="hero-background">
-        <img src="images/Hero-Renew-Image.jpg" alt="Build Ready Digital hero background">
+        <img src="images/Hero-Renew-Image.jpg" alt="Build Ready Digital hero background" fetchpriority="high" decoding="async">
         <div class="hero-overlay"></div>
     </div>
 
@@ -444,32 +444,6 @@
         </div>
     </section>
 
-    <!-- Blog Section -->
-    <section id="blog" class="blog">
-        <div class="container">
-            <h2 class="section-title">Latest Articles</h2>
-            <p class="section-subtitle">Insights on web design, SEO and digital growth.</p>
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/Web-Development-Image.jpg" alt="Website design" loading="lazy" decoding="async">
-                    </div>
-                    <h3>Your Website Is Your Competitive Advantage</h3>
-                    <p>Learn how a professional website helps businesses attract customers and build trust.</p>
-                    <a href="blog.html#blog-post-1">Read Full Article</a>
-                </article>
-                <article class="blog-card">
-                    <div class="blog-image">
-                        <img src="images/SEO-Image.jpg" alt="SEO optimization" loading="lazy" decoding="async">
-                    </div>
-                    <h3>Optimize for Search, Grow Your Business</h3>
-                    <p>Discover practical SEO techniques that improve your visibility online.</p>
-                    <a href="blog.html#blog-post-2">Read Full Article</a>
-                </article>
-            </div>
-        </div>
-    </section>
-
     <section id="contact" class="contact-section">
         <div class="container">
             <div class="contact-card reveal">
@@ -503,7 +477,7 @@
         </div>
     </footer>
 
-    <script src="portfolio-script.js"></script>
+    <script src="portfolio-script.js" defer></script>
     </div>
 
 </body>
